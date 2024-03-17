@@ -1,0 +1,50 @@
+I assume you're running either without a config file or with a config file that doesn't define a listener. As of mosquitto 2.0, this gives the behaviour you're describing. To listen on addresses other than localhost, you need to have a config file with a "listener" line plus some authentication option. At its most wide-open, you could have
+
+listener 1883
+allow_anonymous true
+
+It is, of course, better to restrict the listener to the IP addresses that you need and it's often better to use some kind of authentication mechanism rather than leaving your server wide open.
+
+If you're upgrading from version 1.6 or earlier, you should look at ChangeLog.txt from the installation directory as it has some discussion of breaking changes. You may also want to look at https://mosquitto.org/man/mosquitto-conf-5.html
+
+
+
+Installer Mosquitto sur Raspberry Pi ou Linux
+
+Avant dâinstaller Mosquitto, il est toujours bon de mettre Ã  jour le systÃ¨me
+    sudo apt-get update
+
+Lâinstallation du Broker Mosquitto est trÃ¨s simple.
+    sudo apt-get install mosquitto
+
+Si vous voulez faire des tests sur votre Raspberry, vous pouvez installer les clients mosquitto_sub  (pour souscrire), mosquitto_pub  (pour publier des messages) et mosquitto_passw (pour configurer des utilisateurs et les mots de 
+
+    sudo apt-get install mosquitto-clients
+
+    systemctl status mosquitto
+        sudo systemctl enable mosquitto.service
+
+SÃ©curiser lâaccÃ¨s Ã  Mosquitto par un mot de passe (optionnel)
+
+Par dÃ©faut, il est possible de souscrire (recevoir des messages) sans avoir besoin dâaucune identification. TrÃ¨s pratique pour la mise au point, cela peut vite poser une faille de sÃ©curitÃ© si pilotez vos appareils (chauffage, climatisation, motorisation de volets roulantsâ¦) Ã  lâaide dâun systÃ¨me domotique DIY. Dans ce cas, voici comment protÃ©ger Ã  minima votre installation et activant lâauthentification par un mot de passe.
+
+CrÃ©er un mot de passe et remplaÃ§ant NOM_UTILISATEUR
+
+    sudo mosquitto_passwd -c /etc/mosquitto/passwd NOM_UTILISATEUR
+
+La commande mosquitto_passwd gÃ©nÃ¨re lâempreinte du mot de passe et lâenregistre dans le fichier passwd dans le rÃ©pertoire /etc/mosquitto. 
+
+Ouvrez le fichier de configuration avec 
+    sudo nano /etc/mosquitto/mosquitto.conf
+**************
+        allow_anonymous false
+        password_file /etc/mosquitto/passwd
+************* for use with external ip
+        listener 1883
+        allow_anonymous true
+
+            systemctl restart mosquitto
+
+mosquitto_pub -h localhost -t sensor/temperature -m 22.5
+mosquitto_sub -h localhost -t "sensor/temperature"
+

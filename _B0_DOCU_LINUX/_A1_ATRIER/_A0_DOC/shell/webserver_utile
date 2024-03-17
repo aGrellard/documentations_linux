@@ -1,0 +1,131 @@
+#!/home/pi/bin
+# This script will take an animated GIF and delete every other frame
+# Accepts two parameters: input file and output file
+# Usage: ./<scriptfilename> input.gif output.gif
+# Make a copy of the file
+
+##définition des fonctions status
+#ssh
+status_ssh()
+{
+ps -A | grep ssh >/dev/null 2>&1
+if (test $? -eq 1); then
+SSH=`echo arrété` 
+else SSH=`echo démarré`
+fi
+}
+
+#apache2
+status_apache()
+{
+ps -A | grep apache >/dev/null 2>&1
+if (test $? -eq 1); then
+APACHE=`echo arrété` 
+else APACHE=`echo démarré`
+fi
+}
+
+#mysql
+status_mysql()
+{
+ps -A | grep mysql >/dev/null 2>&1
+if (test $? -eq 1); then
+MYSQL=`echo arrété` 
+else MYSQL=`echo démarré`
+fi
+}
+
+#samba
+status_samba()
+{
+ps -A | grep smbd >/dev/null 2>&1
+if (test $? -eq 1); then
+SAMBA=`echo arrété`
+else SAMBA=`echo démarré`
+fi
+}
+
+#bluetooth
+status_bluetooth()
+{
+ps -A | grep bluetooth >/dev/null 2>&1
+if (test $? -eq 1); then
+BLUE=`echo arrété`
+else BLUE=`echo démarré`
+fi
+}
+
+#plex
+status_Plex()
+{
+Running=$(ps -ef | grep 'Plex Media Server'| grep -v grep | wc -l)
+if [ $Running -gt 0 ]; then
+PLEX=`echo démarré`
+else PLEX=`echo arrété`
+fi
+}
+
+#plex
+status_tansmission()
+{
+ps -A | grep transmission >/dev/null 2>&1
+if (test $? -eq 1); then
+TRANSMISSION=`echo arrété`
+else TRANSMISSION=`echo démarré`
+fi
+}      
+
+
+echo ;
+echo "LAMP 0:on 1:off";
+echo -n "> ";
+read entrant &&
+if  [ "$entrant" = "0" ]; then
+	sudo /etc/init.d/apache2 start;
+elif  [ "$entrant" = "1" ]; then
+	sudo /etc/init.d/apache2 stop;
+fi
+echo ;
+echo "plex 0:on 1:off";
+echo -n "> ";
+read entrant &&
+if  [ "$entrant" = "0" ]; then
+	sudo service plexmediaserver start;
+elif  [ "$entrant" = "1" ]; then
+	sudo service plexmediaserver stop;
+fi
+echo ;
+echo "transmission 0:on 1:off";
+echo -n "> ";
+read entrant &&
+if  [ "$entrant" = "0" ]; then
+	sudo /etc/init.d/transmission-daemon start;sudo
+elif  [ "$entrant" = "1" ]; then
+	sudo /etc/init.d/transmission-daemon stop;
+fi
+echo ;
+echo "samba 0:on 1:off";
+echo -n "> ";
+read entrant &&
+if  [ "$entrant" = "0" ]; then
+	sudo /etc/init.d/smbd start;
+elif  [ "$entrant" = "1" ]; then
+	sudo /etc/init.d/smbd stop;
+fi
+
+##récupération status
+status_ssh
+status_mysql
+status_apache
+status_samba
+status_Plex
+status_tansmission
+echo ;
+echo "ssh 		: " `echo $SSH`
+echo "mysql 		: " `echo $MYSQL`
+echo "apache 		: " `echo $APACHE`
+echo "samba 		: " `echo $SAMBA`
+echo "plex 		: " `echo $PLEX`
+echo "transmission 	: " `echo $TRANSMISSION`
+
+

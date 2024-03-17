@@ -1,0 +1,31 @@
+#!/bin/bash
+while [ 1 ]
+do
+plexuser="NOM_UTILISATEUR_PLEX"
+domoticzvariablename="plex"
+domoticzvariableIDX="IDX_VARIABLE_PLEX_DOMOTCZ"
+plexstatus=$(curl -k -s 'https://IP_SERVEUR_PLEX:32400/status/sessions' | sed -n "/"$plexuser"/,/title/p")
+if [[ $plexstatus == *"playing"* ]]
+then
+status="playing"
+fi
+if [[ $plexstatus == *"paused"* ]]
+then
+status="paused"
+fi
+if [[ $plexstatus != *"$plexuser"* ]]
+then
+status="idle"
+fi
+# Check existing status of variable in Domoticz
+variablestate=$(curl -s "http://IP_DOMOTCZ:8080/json.htm?type=command&param=getuservariable&idx="$domoticzvariableIDX"" | grep "Value")
+# Check if Plex status matches existing variable set in Domoticz
+if [[ $variablestate != *"$status"* ]]
+then
+echo "Status changed: $status"
+curl -s "http://IP_DOMOTCZ:8080/json.htm?type=command&param=updateuservariable&vname="$domoticzvariablename"&vtype=2&vvalue="$status"" 2>/dev/null 1>/dev/null
+else
+echo "Status in sync"
+fi
+sleep 1
+done

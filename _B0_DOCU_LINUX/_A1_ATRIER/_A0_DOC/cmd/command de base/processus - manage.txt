@@ -1,0 +1,52 @@
+Commande "ps" permet d'afficher les processus actifs ainsi que ces ressources utilisé à un instant t, par utilisateur, par PID ...
+Syntaxe: ps [options]
+    Les options
+        L'option "-x" permet de visualiser tout les processus actifs de l'utilisateur courant
+        L'option "-ax" permet de visualiser tous les processus de la machine de tous les utilisateurs
+        L'option "-aux" permet de visualiser affiche les utilisateurs associés à chaque processus
+        L'option "-u nom_utilisateur" affiche chaque processus associés à utilisateur
+        L'option "-p PID" affiche les informations sur un processus
+        L'option "-t" affiche tout les processus liées a un terminal
+
+    Les différents champs
+        PID est l'identificateur unique du processus qui à été définit par le système.
+        TTY indique le numéro de port du terminal (le "?" indique que la commande n'est pas associée à un terminal)
+        TIME affiche le temps processeur utilisé par ce processus
+        CMD affiche le nom de la commande qui utilise ce PID
+        USER indique le nom de l'utilisateur du processus
+        START indique l'heure a laquelle le processus a commencé
+        %CPU affiche l'utilisation du processeur en pourcentage
+        %MEM affiche l'utilisation de la mémoire vive en pourcentage
+        RSS donne l'utilisation de la mémoire physique utilisée en kilobytes par le processus (hors swap)
+        VSZ donne l'utilisation des bibliotheques partagées et la memoire utilisé pour son fonctionnement
+        STAT affiche l'état actuel du processus, R comme Run Démarrer...
+            Voici le détail du champ STAT:
+                D Uninterruptible de son sommeil
+                R Exécutable démarrer
+                S Attend un événement à compléter, endormi (sleep)
+                T Arrêté, soit par un signal de commande d'emploi ou parce qu'elle est tracée
+                W Radiomessagerie (non valable puisque le noyau 2.6.xx)
+                X Morts (ne doit normalement jamais être vu)
+                Z Processus "zombie"
+
+                < De haute priorité
+                N De faible priorité
+                L Pages verrouillées en mémoire
+                s Leader de session
+                l Multi-thread (en utilisant CLONE_THREAD, comme pthreads ne NPTL)
+                + Est dans le processus de premier plan
+
+
+ps aux 
+
+recherche
+    ps aux | grep "proc name"
+fermer le proc
+    KILLL "ID"
+
+
+ps aux  |  grep -i /var/www/html/node_ads/index.js  |  awk '{print $2}'  |  xargs kill -9
+
+ps aux | grep /var/www/html/node_ads_index.js
+
+

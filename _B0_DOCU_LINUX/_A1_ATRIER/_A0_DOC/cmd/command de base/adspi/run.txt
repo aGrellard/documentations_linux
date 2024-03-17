@@ -1,0 +1,1 @@
+python3 "/home/adri/Documents/scripts/python/sniffer/network_scanner/v2/py.py" -t 192.168.0./24

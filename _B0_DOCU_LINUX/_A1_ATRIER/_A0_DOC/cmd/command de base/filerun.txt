@@ -1,0 +1,15 @@
+All done!
+
+FileRun installed successfully!
+
+The default user account was created:
+
+Your username is superuser
+Your password is d10aa976ddd0
+
+
+It is important that you make a note of the above password!
+
+After signing in, set a home folder for your account by editing its permissions from the FileRun control panel.
+
+Click "Next" to close this wizard and open the login page.

@@ -1,0 +1,65 @@
+isk est un outil de base pour réaliser des opérations sur les tables de partitions des disques durs. 
+:: lister toutes les partitions existantes
+	fdisk -l
+
+df (abréviation de disk free en anglais) est une commande UNIX utilisée pour afficher la valeur d'espace disque disponible des systèmes de fichier dont l'utilisateur possède l'accès en lecture1. df est habituellement implémenté en lisant le fichier mtab (en) ou en utilisant 
+:: lister toutes les partitions actives
+	df -h
+
+ou encore
+	mount
+
+
+blkid est un utilitaire en ligne de commande pour trouver ou afficher les attributs de périphériques bloc.
+cet outil est à privilégier pour tout ce qui concerne la gestion du fichier fstab à la mano. 
+	sudo blkid
+
+
+sudo nano /etc/fstab
+	UUID=<uuid-of-your-drive>  <mount-point>  <file-system-type>  <mount-option>  <dump>  <pass>
+		UUID=<uuid-of-ntfs-file-system>   /mnt/ntfs    ntfs    defaults   0   2
+sudo mount -a
+
+
+
+
+pi@mediaServer:~ $ sudo nano /etc/fstab
+  GNU nano 3.2                                                         /etc/fstab
+
+proc            /proc           proc    defaults          0       0
+PARTUUID=5d6c6c71-01  /boot           vfat    defaults          0       2
+PARTUUID=5d6c6c71-02            /       ext4    noatime,nodiratime,defaults     0 1
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+# >>> [openmediavault]
+/dev/disk/by-uuid/01D7BC8E00971C00              /srv/dev-disk-by-uuid-01D7BC8E00971C00  ntfs    defaults,nofail,big_writes      0 2
+# <<< [openmediavault]
+
+
+
+/dev/mmcblk0p1: UUID="44AC-A5C2" TYPE="vfat" PARTUUID="f3051d3f-01"
+/dev/mmcblk0p2: UUID="97af2963-efac-4420-9968-2124e3c8d4b2" TYPE="ext4" PARTUUID="f3051d3f-02"
+/dev/sda1: LABEL="data_pi_1" UUID="01D7BC8E00971C00" TYPE="ntfs" PARTUUID="00dbaf99-5ec1-9b9b-a8c9-3a55eae9618c"
+/dev/mmcblk0: PTUUID="f3051d3f" PTTYPE="dos"
+/dev/sda1 /media/partwin ntfs noauto,user,uid=1001,gid=1000,umask=0555,utf8 0 2
+
+/dev/disk/by-uuid/01D7BC8E00971C00 /mnt/media  ntfs    defaults,nofail,big_writes,user,uid=1000,gid=1000,umask=0555,utf8 0 2
+
+/dev/disk/by-uuid/01D7BC8E00971C00 /mnt/media  ntfs    auto,users,permissions 0 0
+
+
+pi@mediaserver:~ $ sudo blkid
+/dev/mmcblk0p1: LABEL_FATBOOT="boot" LABEL="boot" UUID="5DE4-665C" TYPE="vfat" PARTUUID="c0ab8aea-01"
+/dev/mmcblk0p2: LABEL="rootfs" UUID="7295bbc3-bbc2-4267-9fa0-099e10ef5bf0" TYPE="ext4" PARTUUID="c0ab8aea-02"
+/dev/sda1: LABEL="data_pi_1" UUID="01D7BC8E00971C00" TYPE="ntfs" PARTUUID="00dbaf99-5ec1-9b9b-a8c9-3a55eae9618c"
+/dev/mmcblk0: PTUUID="c0ab8aea" PTTYPE="dos"
+
+
+
+/srv/dev-disk-by-uuid-01D7BC8E00971C00/media/videos/films-pi
+
+
+
+
+
+

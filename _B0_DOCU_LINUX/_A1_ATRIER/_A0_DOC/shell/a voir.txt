@@ -1,0 +1,153 @@
+#!/bin/bash
+
+#script par Beudbeud
+
+
+##définition des fonctions status
+#ssh
+status_ssh()
+{
+ps -A | grep ssh >/dev/null 2>&1
+if (test $? -eq 1); then
+SSH=`echo arrété` 
+else SSH=`echo démarré`
+fi
+}
+
+#apache2
+status_apache()
+{
+ps -A | grep apache >/dev/null 2>&1
+if (test $? -eq 1); then
+APACHE=`echo arrété` 
+else APACHE=`echo démarré`
+fi
+}
+
+#mysql
+status_mysql()
+{
+ps -A | grep mysql >/dev/null 2>&1
+if (test $? -eq 1); then
+MYSQL=`echo arrété` 
+else MYSQL=`echo démarré`
+fi
+}
+
+#samba
+status_samba()
+{
+ps -A | grep smbd >/dev/null 2>&1
+if (test $? -eq 1); then
+SAMBA=`echo arrété`
+else SAMBA=`echo démarré`
+fi
+}
+
+#bluetooth
+status_bluetooth()
+{
+ps -A | grep bluetooth >/dev/null 2>&1
+if (test $? -eq 1); then
+BLUE=`echo arrété`
+else BLUE=`echo démarré`
+fi
+}
+
+##récupération status
+status_ssh
+status_mysql
+status_apache
+status_samba
+status_bluetooth
+
+## Affichage de la liste des services
+    ACT=$(zenity --list --checklist --width=300 --height=233 \
+        --title "Services" \
+        --text="Quel service doit etre démarré ou redemarré ?" \
+        --column="Selection" --column="Services" --column="Status"\
+        FALSE   "ssh"	 `echo $SSH`\
+        TRUE    "apache" `echo $APACHE`\
+        TRUE    "mysql" `echo $MYSQL`\
+	FALSE 	"samba" `echo $SAMBA`\
+	FALSE   "bluetooth" `echo $BLUE`\
+	
+
+   );	
+        if [ "${PIPESTATUS[0]}" != "0" ]; then
+            exit
+        fi
+
+
+##selection des services
+
+    # ssh
+        echo "$ACT" | grep "ssh" >/dev/null
+           if [ "$?" = 0 ] ; then
+			ps -A | grep ssh >/dev/null 2>&1
+			if (test $? -eq 1); then
+                	gksudo '/etc/init.d/ssh start' 
+			else gksudo '/etc/init.d/ssh stop'
+            		fi
+		fi
+
+    # apache2
+        echo "$ACT" | grep "apache" >/dev/null
+            if [ "$?" = 0 ] ; then
+			ps -A | grep apache >/dev/null 2>&1
+			if (test $? -eq 1); then
+                	gksudo '/etc/init.d/apache2 start'
+			else gksudo '/etc/init.d/apache2 stop'
+            		fi
+		fi
+
+    # mysql
+        echo "$ACT" | grep "mysql" >/dev/null
+            if [ "$?" = 0 ] ; then
+			ps -A | grep mysql >/dev/null 2>&1
+			if (test $? -eq 1); then
+                	gksu '/etc/init.d/mysql start' 
+			else gksudo '/etc/init.d/mysql stop'
+            		fi
+            	fi
+
+
+	# samba
+        echo "$ACT" | grep "samba" >/dev/null
+            if [ "$?" = 0 ] ; then
+			ps -A | grep smbd >/dev/null 2>&1
+			if (test $? -eq 1); then
+                	gksudo '/etc/init.d/samba start'
+			else gksudo '/etc/init.d/samba stop'
+			fi
+		fi
+
+	# bluetooth
+        echo "$ACT" | grep "bluetooth" >/dev/null
+            if [ "$?" = 0 ] ; then
+			ps -A | grep bluetooth >/dev/null 2>&1
+			if (test $? -eq 1); then
+                	gksudo '/etc/init.d/bluetooth start'
+			bluetooth-applet --singleton
+			else gksudo '/etc/init.d/samba stop'
+			killall bluetooth-applet
+			fi
+		fi
+
+##récupération status
+status_ssh
+status_mysql
+status_apache
+status_samba
+status_bluetooth
+
+##récapitulatif
+zenity --list  --width=250 --height=233 \
+        --title "Récapitulatif" \
+        --text="Nouveau status des services" \
+        --column="Services" --column="Status"\
+	"ssh"	 `echo $SSH`\
+        "apache" `echo $APACHE`\
+        "mysql" `echo $MYSQL`\
+	"samba" `echo $SAMBA`\
+	"bluetooth" `echo $BLUE`\

@@ -1,0 +1,19 @@
+Bonjour,
+Il te faut utiliser grep et une expression régulière.
+
+ls -S | grep "^-"
+
+Exemple 1 sans grep
+jonas@debianjessie:~/Vidéos$ ls -lS
+total 27648
+-rw-r--r-- 1 jonas jonas 21860913 janv. 25 2011 BillieHoliday_StrangeFruit_SoustitreEspagnol.flv
+-rw-r--r-- 1 jonas jonas 6439655 janv. 25 2011 Billie Holiday - Strange Fruit.flv
+drwxr-xr-x 10 jonas jonas 4096 juil. 23 22:33 miro
+
+
+Exemple 2 avec grep
+jonas@debianjessie:~/Vidéos$ ls -lS | grep "^-"
+-rw-r--r-- 1 jonas jonas 21860913 janv. 25 2011 BillieHoliday_StrangeFruit_SoustitreEspagnol.flv
+-rw-r--r-- 1 jonas jonas 6439655 janv. 25 2011 Billie Holiday - Strange Fruit.flv
+
+Le dossier "miro" n'apparait plus. 

@@ -1,0 +1,4 @@
+http://manpagesfr.free.fr/man/man1/rm.1.html
+
+remove folder and sub folder
+	sudo rm -Rf /source

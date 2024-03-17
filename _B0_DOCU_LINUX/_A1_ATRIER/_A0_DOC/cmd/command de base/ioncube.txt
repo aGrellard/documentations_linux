@@ -1,0 +1,15 @@
+https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_armv7l.tar.gz
+uname -r
+wget 
+
+extension_dir => /usr/lib/php/20180731 => /usr/lib/php/20180731
+sudo cp /tmp/ioncube/ioncube_loader_lin_7.3.so /usr/lib/php/20180731
+
+$ sudo vi /etc/php/7.0/cli/php.ini 		#for PHP CLI 
+$ sudo vi /etc/php/7.0/fpm/php.ini		#for PHP-FPM & Nginx
+$ sudo vi /etc/php/7.3/apache2/php.ini	        #for Apache2	
+
+
+zend_extension = /usr/lib/php/20180731/ioncube_loader_lin_7.3.so
+sudo systemctl restart apache2
+php -v

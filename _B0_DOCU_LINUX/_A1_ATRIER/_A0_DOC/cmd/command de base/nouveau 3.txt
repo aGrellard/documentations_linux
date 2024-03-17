@@ -1,0 +1,26 @@
+FDResPub
+Publication des ressources de découverte de fonctions
+	sc config FDResPub start=auto
+
+
+
+
+DISM /online /get-features /format:table | more
+	SMB1Protocol                                | Activé
+	SMB1Protocol-Client                         | Activé
+	SMB1Protocol-Server                         | Activé
+	SmbDirect                                   | Activé
+	SMB1Protocol-Deprecation                    | Activé
+
+
+5. Pour activer ou désactiver une fonctionnalités ou un service de la liste, tapez :
+– Pour activer :
+	DISM /online /enable-feature /featurename:[nom fonctionnalité]
+– Pour désactiver :
+	DISM /online /disable-feature /featurename:[nom fonctionnalité]
+	
+DISM /online /enable-feature /featurename:SmbDirect
+DISM /online /enable-feature /featurename:SMB1Protocol
+DISM /online /enable-feature /featurename:SMB1Protocol-Client
+DISM /online /enable-feature /featurename:SMB1Protocol-Server
+DISM /online /enable-feature /featurename:SMB1Protocol-Deprecation

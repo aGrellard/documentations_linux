@@ -1,0 +1,4 @@
+su
+usermod -aG sudo flo
+
+

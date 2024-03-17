@@ -1,0 +1,1 @@
+tty-clock -Sra 100000000 -d 0

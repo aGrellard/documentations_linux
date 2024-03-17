@@ -1,0 +1,29 @@
+{"jsonrpc":"2.0","method":"Player.PlayPause","params":[1,"toggle"],"id":26}
+
+
+✔
+
+  30/10/2021   19:05.42   /home/mobaxterm  curl --data-binary '[{"jsonrpc":"2.0","method":"Player.PlayPause","params":[1,"toggle"],"id":26}]' -H'content-type: application/json;' http://kodi:kodi@localhost:80/jsonrpc
+[{"id":26,"jsonrpc":"2.0","result":{"speed":0}}]                                                                                                                                                        ✔
+
+  30/10/2021   19:05.45   /home/mobaxterm  curl --data-binary '{"jsonrpc":"2.0","method":"Input.Back","id":26}' -H'content-type: application/json;' http://kodi:kodi@localhost:80/jsonrpc       {"id":26,"jsonrpc":"2.0","result":"OK"}                                                                                                                                                                 ✔
+
+  30/10/2021   19:06.25   /home/mobaxterm  curl --data-binary '{"jsonrpc":"2.0","method":"Input.Back","id":26}' -H'content-type: application/json;' http://kodi:kodi@localhost:80/jsonrpc
+{"id":26,"jsonrpc":"2.0","result":"OK"}                                                                                                                                                                 ✔
+
+  30/10/2021   19:06.30   /home/mobaxterm  curl --data-binary '{"jsonrpc": "2.0", "method": "Player.GetActivePlayers", "id": 1}' -H'content-type: application/json;' http://kodi:kodi@localhost:80/jsonrpc
+{"id":1,"jsonrpc":"2.0","result":[{"playerid":1,"playertype":"internal","type":"video"}]}                                                                                                               ✔
+
+  30/10/2021   19:06.38   /home/mobaxterm 
+
+http://192.168.0.3/jsonrpc?request={"jsonrpc":"2.0","method":"Player.PlayPause","params":[1,"toggle"],"id":26}
+
+
+
+
+
+[{"jsonrpc":"2.0","method":"Application.GetProperties","params":[["volume","muted","version"]],"id":15}]
+[{"jsonrpc":"2.0","method":"Player.GetActivePlayers","params":{},"id":16}]
+
+[{"jsonrpc":"2.0","method":"Player.GetProperties","params":[1,["playlistid","speed","position","totaltime","time","percentage","shuffled","repeat","canrepeat","canshuffle","canseek","partymode"]],"id":17},{"jsonrpc":"2.0","method":"Player.GetItem","params":[1,["title","thumbnail","file","artist","genre","year","rating","album","track","duration","playcount","dateadded","episode","artistid","albumid","tvshowid","fanart"]],"id":18}]
+

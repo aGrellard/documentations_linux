@@ -1,0 +1,42 @@
+mkdir /shares/public
+chown -R root:users /shares/public
+chmod -R ug=rwx,o=rx /shares/public		
+
+# dl and install samba
+apt-get install samba samba-common-bin 
+
+configure samba 
+nano /etc/samba/smb.conf
+	section
+		Authentification
+			ajouter la ligne
+				//regle de securitée quand luser est authentifier
+				security = user
+		Share definitions
+			modifier
+				read only = no
+	nouvelle section
+[public]
+  comment = Tous les documents utiles
+  path = /shares/public
+  valid users = @users
+  force group = users
+  # assurez-vous que l'utilisateur et le groupe obtiennent toujours une autorisation de lecture / écriture sur le fichier.
+  create mask = 0660  
+  directory mask = 0771 
+  read only = No
+
+# reset samba
+/etc/init.d/smbd restart
+/etc/init.d/nmbd restart
+
+# ajouter un user
+smbpasswd -a pi
+
+# ajouter un disque extern : lui creer un dossier
+mkdir /shares/public/disk1
+# relier le dd au dossier 
+mount /dev/sda1 /shares/public/disk1
+
+chown -R root:users /shares/public/disk1
+chmod -R ug=rwx,o=rx /shares/public/disk1	

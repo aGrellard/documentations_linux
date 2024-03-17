@@ -1,0 +1,180 @@
+Cette méthode consiste à installer les paquets nécessaires pour Apache, PHP et MySQL :
+	sudo apt install apache2 apache2-doc 
+		sudo service apache2 status
+	sudo apt instal php libapache2-mod-php mysql-server php-mysql
+ou si vous préférez opter pour MariaDB au lieu de MySQL :
+	sudo apt install apache2 apache2-doc 
+		sudo service apache2 status
+	sudo apt install php libapache2-mod-php mariadb-server php-mysql
+	
+La pile LAMP est alors installée. Cependant la plupart des scripts PHP (CMS, forums, applications web en tout genre) utilisent des modules de PHP pour bénéficier de certaines fonctionnalités.
+	sudo apt install php-common php-cli php-curl php-gd php-intl php-json php-mbstring php-xml php-zip
+
+	
+Il est possible de vérifier que le service Apache fonctionne correctement en utilisant la commande suivante :
+	sudo service apache2 status
+		La mention active (running) doit apparaître.
+La procédure Apache peut se gérer comme suit :
+	sudo service apache2 start 		=> permet de démarrer le service
+	sudo service apache2 stop 		=> permet d’arrêter le service
+	sudo service apache2 restart 	=> permet de relancer ou recharger le service
+
+
+Pour tester l’installation PHP, dans le répertoire /var/www/html, créez le fichier info.php avec le contenu suivant :
+	cd /var/www/html
+		sudo nano info.php
+			Insérez dedans :
+	<?php
+		phpinfo();
+	?>
+
+https://www.adsysteme.com/lacces-a-distance-aux-bases-de-donnees-mysql-mariadb/
+ 	sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+	cat /etc/mysql/mariadb.conf.d/*.cnf
+
+sudo mysql_secure_installation
+
+Pour tester l’accès à votre base de données, voici la commande à utiliser dans votre terminal :
+	mysql -u root -p
+	
+
+sudo apt-get install phpmyadmin
+	Dans les choix proposés, sélectionnez un serveur web à reconfigurer automatiquement pour exécuter phpMyAdmin :
+		cochez ()apache2, puis Entrée ;
+		acceptez l’aide à la configuration, puis rentrez un mot de passe administrateur MySQL.
+
+M 1
+	Afin d’accéder à l’interface de gestion de phpMyAdmin, vous devrez finaliser la configuration votre serveur Apache. Pour cela, éditez le fichier de configuration Apache :
+		sudo nano /etc/apache2/apache2.conf
+
+	À la fin du fichier, rajoutez :
+		# Include phpMyAdmin
+		Include /etc/phpmyadmin/apache.conf
+
+	Le service Apache doit ensuite être relancé grâce à cette commande :
+		sudo service apache2 restart
+	Afin de vous connecter, vous devrez au préalable créer un utilisateur possédant les droits administrateur pour phpMyAdmin :
+		mysql -u root -p
+		[mot de passe]
+		MariaDB [(none)]> CREATE USER 'my_user'@'localhost' IDENTIFIED BY 'my_password';
+		MariaDB [(none)]> GRANT ALL PRIVILEGES ON * . * TO 'my_user'@'localhost';
+		MariaDB [(none)]> FLUSH PRIVILEGES;
+	Accédez ensuite à l’interface via http://IP_du_serveur/phpmyadmin/
+
+M 2
+	commençons par créer un nouvel utilisateur dans le shell MySQL :
+		CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+			Remarque : lorsque nous ajouterons des utilisateurs dans le shell MySQL au cours de ce tutoriel, nous indiquerons que l'hôte de l'utilisateur est localhost et non l'adresse IP du serveur. localhost est un nom d'hôte qui signifie « cet ordinateur ». MySQL traite tout particulièrement ce nom d'hôte spécifique : lorsqu'un utilisateur avec cet hôte se connecte sur MySQL, il tentera de se connecter au serveur local en utilisant un fichier de socket Unix. Par conséquent, de manière générale, vous pouvez utiliser localhost si vous prévoyez de vous connecter à votre serveur en SSH ou exécuter le client mysql local pour vous connecter au serveur MySQL local.	
+				
+		
+	À ce stade, newuser n'a aucune autorisation et ne peut rien faire sur les bases de données. En effet, même si newuser tente de se connecter (avec le mot de passe password), il ne pourra pas atteindre le shell MySQL.
+	Par conséquent, la première chose à faire consiste à donner accès à l'utilisateur aux informations dont il a besoin.
+		GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+			Les astérisques de cette commande renvoient à la base de données et à la table (respectivement) auxquelles ils peuvent accéder. Cette commande spécifique permet à l'utilisateur de lire, modifier, exécuter et effectuer toutes tâches sur l'intégralité des bases de données et des tables.
+
+			Notez que, dans cet exemple, nous accordons à newuser un total accès root à tout ce qui se trouve dans notre base de données. Bien que cela soit utile pour expliquer certains concepts MySQL, il se peut que cette méthode soit impraticable sur la plupart des cas d'utilisation et expose votre base de données à d'importants risques de sécurité.
+
+	Une fois que vous en aurez fini avec les autorisations que vous souhaitez configurer pour vos nouveaux utilisateurs, veillez à toujours recharger tous les privilèges.
+		FLUSH PRIVILEGES;
+		
+		
+	######################### EXTRA	
+	Comment octroyer différentes autorisations aux utilisateurs
+
+	Voici une courte liste des autres autorisations possibles couramment utilisées que vous pouvez octroyer aux utilisateurs.
+		ALL PRIVILEGES 	: comme nous l'avons vu précédemment, cela donne à l'utilisateur de MySQL un total accès à une base de données désignée (ou un accès global à l'ensemble du système si aucune base de données n'est sélectionnée)
+		CREATE 			: permet de créer de nouvelles tables ou bases de données
+		DROP 			: permet de supprimer des tables ou des bases de données
+		DELETE 			: permet de supprimer des lignes des tables
+		INSERT 			: permet d'insérer des lignes dans les tables
+		SELECT 			: permet d'utiliser la commande SELECT pour lire des bases de données
+		UPDATE 			: permet de mettre à jour les lignes d'une table
+		GRANT OPTION 	: permet d'accorder ou de supprimer les privilèges des autres utilisateurs
+
+	Pour donner une autorisation à un utilisateur spécifique, vous pouvez utiliser le framework suivant :
+		GRANT type_of_permission ON database_name.table_name TO 'username'@'localhost';
+			Si vous souhaitez lui donner accès à l'une des bases de données ou des tables, veillez à bien remplacer le nom de la base de données ou de la table par un astérisque (*).
+			À chaque fois que vous mettez à jour ou modifiez une autorisation, veillez à bien utiliser la commande Flush Privileges.
+
+	Pour révoquer une autorisation, la structure est pratiquement identique à celle de l'octroi d'autorisation :
+		REVOKE type_of_permission ON database_name.table_name FROM 'username'@'localhost';
+			Notez que, lorsque vous révoquez des autorisations, vous devez utiliser la syntaxe FROM à la place du TO que nous avons utilisé pour accorder des autorisations.
+
+	Vous pouvez contrôler les autorisations actuellement octroyées à un utilisateur en exécutant la commande suivante :
+		SHOW GRANTS FOR 'username'@'localhost';
+
+	De la même manière que vous pouvez supprimer des bases de données avec DROP, vous pouvez utiliser DROP pour supprimer complètement un utilisateur :
+		DROP USER 'username'@'localhost';
+
+	Pour tester votre nouvel utilisateur, déconnectez-vous en saisissant :
+		quit
+
+	et reconnectez-vous en utilisant la commande suivante dans le terminal :
+		mysql -u [username] -p
+	#########################
+
+
+
+
+MULTIPLE HOST
+
+
+
+
+a configuration des dossiers
+
+Au départ, le serveur Apache est déjà configuré pour y desservir un site Web. Il ne s'agit donc que d'y déposer les fichiers dans le dossier /var/www/html. Cependant, ce dernier appartient à "www-data" et votre usager SSH pourrait ne pas avoir les permissions adéquates pour modifier le contenu du dossier. Voici donc comment rendre votre usager SSH propriétaire du dossier.
+
+# Remplacez "votre-usager-ssh" par le nom de votre usager SSH
+    chown -R votre-usager-ssh /var/www/html
+
+Par la suite, il faut préparer un dossier pour recevoir les fichiers du deuxième site Web.
+    mkdir /var/www/site2
+
+# Encore ici, remplacez "votre-usager-ssh" par le nom de votre usager SSH
+    chown -R votre-usager-ssh /var/www/site2
+    chgrp -R www-data /var/www/site2
+
+
+La configuration du serveur Apache
+
+Il est maintenant temps de configurer Apache pour lui permettre de desservir le deuxième site Web. Il faut commencer par dupliquer la configuration du premier site Web.
+    cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/001-site2.conf
+
+Ensuite, il faut modifier la configuration du nouveau fichier (001-site2.conf). 
+    nano /etc/apache2/sites-available/001-site2.conf
+
+En utilisant un éditeur de texte (ex: nano, vi) il s'agit de modifier 3 choses:
+
+# Sous <VirtualHost *:80>, ajoutez la ligne suivante.
+    ServerName site2.com
+# Remplacez site2.com par le domaine/sous-domaine du deuxième site Web. 
+# Modifier le documentRoot, ce qui indique à Apache où seront placés les fichiers.
+    DocumentRoot /var/www/site2
+
+# Modifier /var/www/html pour /var/www/site2 sur la ligne <Directory ...
+    <Directory "/var/www/html">
+
+Lorsque le fichier est configuré, il ne reste qu'à activer le nouveau site Web et sa configuration. Dans le terminal, écrire:
+    a2ensite 001-site2.conf
+    systemctl restart apache2.service
+
+# ou, sur les serveurs Ubuntu plus agés...
+    a2ensite 001-site2.conf
+    service apache2 restart
+
+Voilà! Vous devriez maintenant être capable avec vos deux domaines/sous-domaines de desservir des fichiers différents, donc d'avoir deux sites Web distincts. Le premier site desservira les fichiers à partir du dossier var/www/html, et le deuxième, /var/www/site2.
+
+
+
+
+
+
+
+
+https://forum.ubuntu-fr.org/viewtopic.php?id=103487
+/etc/apache2/apache2.conf
+/etc/apache2/ports.conf
+
+
+

@@ -1,0 +1,5 @@
+install
+    iptraf-ng
+    bmon
+    nethogs
+
