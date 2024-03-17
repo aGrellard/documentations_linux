@@ -1,0 +1,53 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid #ccc;
+    color: #444;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Style pour la table des matières */
+#TOC {
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Style pour les blocs de code */
+pre {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+/* Style pour le code inline */
+code {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    font-family: "Courier New", Courier, monospace;
+    padding: 2px 4px;
+}
