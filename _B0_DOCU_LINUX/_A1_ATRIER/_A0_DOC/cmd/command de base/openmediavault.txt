@@ -1,7 +1,0 @@
-update and ugrade
-sudo rm -f /etc/systemd/network/99-default.link
-
-DL && INSTALL from 
-https://github.com/OpenMediaVault-Plugin-Developers/installScript
-	sudo wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
-	sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash

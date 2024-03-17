@@ -1,2 +1,0 @@
-nohup python3 /home/pi/prog/python/socket_t3.py &>/dev/null &
-jobs

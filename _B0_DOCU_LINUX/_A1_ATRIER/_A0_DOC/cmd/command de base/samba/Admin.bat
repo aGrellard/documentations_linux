@@ -1,2 +1,0 @@
-NET USE * /del /YES
-NET USE X: \\MEDIASERVER\root /USER:pi adri0724 

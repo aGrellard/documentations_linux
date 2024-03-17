@@ -1,3 +1,0 @@
-sudo iwlist scan
-sudo iw dev wlan0 scan
-nmcli dev wifi

@@ -1,2 +1,0 @@
-./boot/firmware/config.txt
-./boot/config.txt

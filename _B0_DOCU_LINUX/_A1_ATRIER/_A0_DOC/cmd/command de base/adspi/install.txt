@@ -1,5 +1,0 @@
-https://www.it-swarm-fr.com/fr/sound/comment-definir-un-peripherique-de-sortie-audio-par-defaut-dans-ubuntu-18.04/998314130/
-
-sudo apt install chromium-browser
-
-

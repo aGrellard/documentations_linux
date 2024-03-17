@@ -1,1 +1,0 @@
-curl 'wcevo8266.local/api?&ALSI=flash%20chip' | jq | batcat

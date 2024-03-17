@@ -1,9 +1,0 @@
-sudo apt install transmission-daemon
-
-Transmission est installé dès la fin de l’exécution de cette commande. Il ne vous reste plus qu’à le configurer. Pour cela il suffit d’interrompre le processus transmission et d’éditer le fichier de configuration.
-
-sudo /etc/init.d/transmission-daemon stop
-
-Pour interrompre le processus et pour éditer le fichier de configuration.
-
-sudo nano /etc/transmission-daemon/settings.json
