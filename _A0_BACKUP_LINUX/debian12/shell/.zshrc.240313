@@ -103,22 +103,10 @@ source $ZSH/oh-my-zsh.sh
 copy_find_a() {
     echo "find -type d \( -iname 'md' \) -o  \( -iname \"*cmd*\" \) -exec find {} -type f -iname \"*.md\" \;" | xclip -selection clipboard
 }
-copy_awk_full() {
-   echo "awk -v OFS=\"|\" '{for (i = 1; i <= NF; i++) printf \"%s%s\", \$i, (i < NF ? OFS : \"\\\\n\")}'" | xclip -selection clipboard
-}
-
 
 alias clip="xclip -selection clipboard"
 alias find_1='copy_find_a'
-alias docu_linux="cd /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX/_B0_DOCU_LINUX/md"
-alias awk_full="copy_awk_full" 
 
-# add to the end : add alias you'd like to set
-alias ll='ls $LS_OPTIONS -l'
-alias l='ls $LS_OPTIONS -la'
-alias rm='rm -i'
-#alias cp='cp -i'
-#alias mv='mv -i'
 
 export HSTR_CONFIG=hicolor         # Utilisez des couleurs pour le highlighting
 
@@ -134,4 +122,3 @@ setopt SHARE_HISTORY
 
 
 export PATH="$HOME/bin:$PATH"
-export PATH="$PATH:/snap/bin"

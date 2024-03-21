@@ -4,16 +4,16 @@
   - [Syntaxe](#syntaxe)
   - [Options principales](#options-principales)
 - [Exemples d'utilisation](#exemples-dutilisation)
-  - [1. Création d'un utilisateur standard sans options spécifiques :](#1-création-dun-utilisateur-standard-sans-options-spécifiques-)
-  - [2. Création d'un utilisateur avec un répertoire personnel spécifique :](#2-création-dun-utilisateur-avec-un-répertoire-personnel-spécifique-)
-  - [3. Création d'un utilisateur et création de son répertoire personnel si celui-ci n'existe pas :](#3-création-dun-utilisateur-et-création-de-son-répertoire-personnel-si-celui-ci-nexiste-pas-)
-  - [4. Création d'un utilisateur avec un shell spécifique :](#4-création-dun-utilisateur-avec-un-shell-spécifique-)
-  - [5. Création d'un utilisateur avec un GID spécifique :](#5-création-dun-utilisateur-avec-un-gid-spécifique-)
-  - [6. Ajout d'un utilisateur à des groupes supplémentaires :](#6-ajout-dun-utilisateur-à-des-groupes-supplémentaires-)
-  - [7. Création d'un utilisateur avec un UID spécifique :](#7-création-dun-utilisateur-avec-un-uid-spécifique-)
-  - [8. Définition d'une date d'expiration pour le compte :](#8-définition-dune-date-dexpiration-pour-le-compte-)
-  - [9. Définition du nombre de jours d'inactivité après expiration du mot de passe :](#9-définition-du-nombre-de-jours-dinactivité-après-expiration-du-mot-de-passe-)
-  - [10. Création d'un utilisateur avec un mot de passe initial (à utiliser avec prudence) :](#10-création-dun-utilisateur-avec-un-mot-de-passe-initial-à-utiliser-avec-prudence-)
+  - [1. Création d'un utilisateur standard sans options spécifiqu](#1-création-dun-utilisateur-standard-sans-options-spécifiqu)
+  - [2. Création d'un utilisateur avec un répertoire personnel spécifique](#2-création-dun-utilisateur-avec-un-répertoire-personnel-spécifique)
+  - [3. Création d'un utilisateur et création de son répertoire personnel si celui-ci n'existe pas](#3-création-dun-utilisateur-et-création-de-son-répertoire-personnel-si-celui-ci-nexiste-pas)
+  - [4. Création d'un utilisateur avec un shell spécifique](#4-création-dun-utilisateur-avec-un-shell-spécifique)
+  - [5. Création d'un utilisateur avec un GID spécifique](#5-création-dun-utilisateur-avec-un-gid-spécifique)
+  - [6. Ajout d'un utilisateur à des groupes supplémentaires](#6-ajout-dun-utilisateur-à-des-groupes-supplémentaires)
+  - [7. Création d'un utilisateur avec un UID spécifique](#7-création-dun-utilisateur-avec-un-uid-spécifique)
+  - [8. Définition d'une date d'expiration pour le compte](#8-définition-dune-date-dexpiration-pour-le-compte)
+  - [9. Définition du nombre de jours d'inactivité après expiration du mot de passe](#9-définition-du-nombre-de-jours-dinactivité-après-expiration-du-mot-de-passe)
+  - [10. Création d'un utilisateur avec un mot de passe initial (à utiliser avec prudence)](#10-création-dun-utilisateur-avec-un-mot-de-passe-initial-à-utiliser-avec-prudence)
 - [Cas d'utilisation de la fonction](#cas-dutilisation-de-la-fonction)
   - [1. **Création d'un nouvel employé dans le système**:](#1-création-dun-nouvel-employé-dans-le-système)
   - [2. **Ajout d'un utilisateur pour un service spécifique sans répertoire personnel**:](#2-ajout-dun-utilisateur-pour-un-service-spécifique-sans-répertoire-personnel)
@@ -28,6 +28,8 @@
   - [6. **Configuration d'un compte avec un shell spécifique**:](#6-configuration-dun-compte-avec-un-shell-spécifique)
   - [7. **Création d'un compte avec un mot de passe prédéfini**:](#7-création-dun-compte-avec-un-mot-de-passe-prédéfini)
   - [8. **Création d'un compte pour un utilisateur avec des groupes supplémentaires**:](#8-création-dun-compte-pour-un-utilisateur-avec-des-groupes-supplémentaires)
+  - [9. **Création d'un compte qui empêche l'utilisateur de se connecter au serveur et répertoire home**:](#9-création-dun-compte-qui-empêche-lutilisateur-de-se-connecter-au-serveur-et-répertoire-home)
+
 
 
 La commande `useradd` est une commande de base dans les systèmes Unix et Linux, utilisée pour créer un nouvel utilisateur sur le système. Elle permet de configurer les paramètres initiaux d'un compte utilisateur, tels que le répertoire personnel, le shell de connexion, et le groupe d'utilisateurs.
@@ -53,52 +55,52 @@ useradd [options] USERNAME
 
 # Exemples d'utilisation
 
-## 1. Création d'un utilisateur standard sans options spécifiques :
+## 1. Création d'un utilisateur standard sans options spécifiqu
    ```bash
    useradd username
    ```
    
-## 2. Création d'un utilisateur avec un répertoire personnel spécifique :
+## 2. Création d'un utilisateur avec un répertoire personnel spécifique
    ```bash
    useradd -d /opt/username username
    ```
    
-## 3. Création d'un utilisateur et création de son répertoire personnel si celui-ci n'existe pas :
+## 3. Création d'un utilisateur et création de son répertoire personnel si celui-ci n'existe pas
    ```bash
    useradd -m username
    ```
    
-## 4. Création d'un utilisateur avec un shell spécifique :
+## 4. Création d'un utilisateur avec un shell spécifique
    ```bash
    useradd -s /bin/zsh username
    ```
    
-## 5. Création d'un utilisateur avec un GID spécifique :
+## 5. Création d'un utilisateur avec un GID spécifique
    ```bash
    useradd -g users username
    ```
    
-## 6. Ajout d'un utilisateur à des groupes supplémentaires :
+## 6. Ajout d'un utilisateur à des groupes supplémentaires
    ```bash
    useradd -G wheel,sudo username
    ```
    
-## 7. Création d'un utilisateur avec un UID spécifique :
+## 7. Création d'un utilisateur avec un UID spécifique
    ```bash
    useradd -u 1001 username
    ```
    
-## 8. Définition d'une date d'expiration pour le compte :
+## 8. Définition d'une date d'expiration pour le compte
    ```bash
    useradd -e 2024-12-31 username
    ```
    
-## 9. Définition du nombre de jours d'inactivité après expiration du mot de passe :
+## 9. Définition du nombre de jours d'inactivité après expiration du mot de passe
    ```bash
    useradd -f 30 username
    ```
    
-## 10. Création d'un utilisateur avec un mot de passe initial (à utiliser avec prudence) :
+## 10. Création d'un utilisateur avec un mot de passe initial (à utiliser avec prudence)
     ```bash
     useradd -p $(openssl passwd -crypt 'password') username
     ```
@@ -184,5 +186,12 @@ Voici des cas d'utilisation supplémentaires pour `useradd`, illustrant comment 
    useradd -m -G wheel,developers multiuser
    ```
    Cela crée un compte `multiuser` et l'ajoute aux groupes `wheel` et `developers`.
+
+## 9. **Création d'un compte qui empêche l'utilisateur de se connecter au serveur et répertoire home**:
+   Pour cela, utilisez la commande `useradd` avec l'option `-r` (qui crée un compte système) et l'option `-s /usr/sbin/nologin` (qui empêche l'utilisateur de se connecter au serveur). Vous pouvez aussi utiliser l'option `-M` pour ne pas créer de répertoire home, si ce n'est pas nécessaire.
+
+      ```bash
+      sudo useradd -r -s /usr/sbin/nologin -M nom_utilisateur
+      ```
 
 Chacun de ces cas d'utilisation montre comment `useradd` peut être utilisé de manière flexible pour répondre aux exigences variées de gestion des comptes utilisateurs, de la création de comptes basiques à des configurations plus complexes et spécifiques.
