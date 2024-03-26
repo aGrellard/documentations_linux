@@ -42,6 +42,13 @@ classoption: [oneside]
     - [tree](#tree)
   - [Terminal (TTY - Teletype Terminal Emulator)](#terminal-tty---teletype-terminal-emulator)
     - [Télechargement des scripts d'installation](#télechargement-des-scripts-dinstallation)
+      - [méthode avec git clone](#méthode-avec-git-clone)
+      - [méthode avec curl et unzip](#méthode-avec-curl-et-unzip)
+    - [Rendre les scripts d'installation exécutable](#rendre-les-scripts-dinstallation-exécutable)
+      - [`chmod`](#chmod)
+        - [À quoi sert `chmod +x` ?](#à-quoi-sert-chmod-x-)
+        - [Exemple](#exemple)
+    - [Utilisation des scripts d'installation](#utilisation-des-scripts-dinstallation)
   - [installation des utilitaires pour le systéme de fichier](#installation-des-utilitaires-pour-le-systéme-de-fichier)
     - [Installation de ntfs-3g](#installation-de-ntfs-3g)
   - [Configuration du montage automatique des disques](#configuration-du-montage-automatique-des-disques)
@@ -85,7 +92,11 @@ systéme de fichier | Contrôle a distance | partage de fichier
 
 ### Une image disque
 
-Une image disque est un fichier qui contient une copie exacte d'un disque dur, d'une clé USB ou d'un autre support de stockage. Les images disque sont souvent utilisées pour sauvegarder et restaurer des données, cloner des disques, ou créer des disques amorçables. Elles peuvent être stockées sur un disque dur, un serveur, un lecteur réseau ou un autre support de stockage.
+Une image disque est un fichier qui contient une copie exacte d'un disque dur, d'une clé USB ou d'un autre support de stockage.
+
+Les images disque sont souvent utilisées pour sauvegarder et restaurer des données, cloner des disques, ou créer des disques amorçables. 
+
+Elles peuvent être stockées sur un disque dur, un serveur, un lecteur réseau ou un autre support de stockage.
 
 #### La création d'une image disque
 
@@ -96,20 +107,35 @@ La création d'une image disque, comme une image ISO d'un CD d'installation de W
 <summary>Voici les différences clés</summary>
 
 1. **Réplication exacte vs. Copie de fichiers**
-   - **Image disque** : Créer une image disque (comme une image ISO) consiste à faire une réplication exacte de tous les contenus du disque, incluant les fichiers, la structure des dossiers, les informations de démarrage, et les attributs de fichiers, en un seul fichier conteneur. Cela inclut également les secteurs de démarrage, les partitions, et les espaces non alloués.
-   - **Copier-coller** : Le copier-coller des fichiers d'un CD vers un autre emplacement (par exemple, un disque dur) copie uniquement les fichiers et dossiers visibles, sans préserver les informations de démarrage, les attributs spéciaux des fichiers, ou la structure exacte des données sur le disque.
+   - **Image disque** 
+  
+      Créer une image disque (comme une image ISO) consiste à faire une réplication exacte de tous les contenus du disque, incluant les fichiers, **la structure des dossiers**, **les informations de démarrage**, et **les attributs de fichiers**, en un seul fichier conteneur. 
+      
+      Cela inclut également **les secteurs de démarrage**, **les partitions**, et **les espaces non alloués**.
 
-2. **Préservation des informations de démarrage**
-   - Les disques d'installation, comme ceux de Windows, contiennent des informations de démarrage spécifiques qui sont nécessaires pour lancer le processus d'installation lors du démarrage de l'ordinateur à partir du disque. Ces informations ne sont pas copiées lors d'une opération de copier-coller standard, mais elles sont intégralement incluses dans une image disque.
+   - **Copier-coller**
+  
+      Le copier-coller des fichiers d'un CD vers un autre emplacement (par exemple, un disque dur) copie uniquement les fichiers et dossiers visibles, sans préserver **les informations de démarrage**, **les attributs spéciaux** des fichiers, ou la **structure exacte des données** sur le disque.
 
-3. **Facilité de distribution et d'utilisation**
-   - Une image disque peut être facilement distribuée, stockée, ou montée comme un disque virtuel dans un système d'exploitation. Elle peut également être gravée sur un disque vierge pour créer une copie exacte de l'original. Cette polyvalence est particulièrement utile pour la distribution de logiciels ou le déploiement de systèmes d'exploitation.
+1. **Préservation des informations de démarrage**
+   
+      Les disques d'installation, comme ceux de Windows, contiennent des informations de démarrage spécifiques qui sont nécessaires pour lancer le processus d'installation lors du démarrage de l'ordinateur à partir du disque.
 
-4. **Intégrité et fidélité des données**
-   - La création d'une image disque assure la conservation de l'intégrité et de la fidélité des données originales, y compris les métadonnées et les attributs de fichiers, qui pourraient être modifiés ou perdus lors d'une simple copie. Cela est crucial pour les logiciels et systèmes d'exploitation qui dépendent de configurations spécifiques et de données de démarrage pour fonctionner correctement.
+      Ces informations ne sont pas copiées lors d'une opération de copier-coller standard, mais elles sont intégralement incluses dans une image disque.
 
-5. **Questions légales**
-   - Dans le contexte de la légalité, créer des images disque de logiciels est généralement autorisé pour des copies de sauvegarde ou l'usage personnel, à condition que vous possédiez une licence pour le logiciel original. La distribution ou le partage de ces images sans autorisation viole typiquement les droits d'auteur.
+2. **Facilité de distribution et d'utilisation**
+   
+    Une image disque peut être facilement distribuée, stockée, ou montée comme un disque virtuel dans un système d'exploitation. 
+    
+    Elle peut également être gravée sur un disque vierge pour créer une copie exacte de l'original. 
+    
+    Cette polyvalence est particulièrement utile pour la distribution de logiciels ou le déploiement de systèmes d'exploitation.
+
+3. **Intégrité et fidélité des données**
+
+    La création d'une image disque assure la conservation de l'intégrité et de la fidélité des données originales, y compris les métadonnées et les attributs de fichiers, qui pourraient être modifiés ou perdus lors d'une simple copie. 
+    
+    Cela est crucial pour les logiciels et systèmes d'exploitation qui dépendent de configurations spécifiques et de données de démarrage pour fonctionner correctement.
 
 </details><br>
 
@@ -118,7 +144,9 @@ En résumé, tandis que le copier-coller peut être suffisant pour des fichiers 
 
 #### Un disque amorçable
 
-Un disque amorçable est un disque dur, une clé USB ou un autre support de stockage qui contient un système d'exploitation ou un programme qui peut être exécuté directement à partir du disque. Les disques amorçables sont souvent utilisés pour installer des systèmes d'exploitation, exécuter des programmes de récupération de données, ou tester des systèmes sans modifier le disque dur principal.
+Un disque amorçable est un disque dur, une clé USB ou un autre support de stockage qui contient un système d'exploitation ou un programme qui peut être exécuté directement à partir du disque. 
+
+Les disques amorçables sont souvent utilisés pour installer des systèmes d'exploitation, exécuter des programmes de récupération de données, ou tester des systèmes sans modifier le disque dur principal.
 
 ### Téléchargez l’image Debian créée pour le Raspberry Pi.
 
@@ -126,10 +154,19 @@ Un disque amorçable est un disque dur, une clé USB ou un autre support de stoc
 
 ### Flashez l'image sur une nouvelle carte SD avec Raspberry Pi Imager.
 
-- Contrairement à la création d'une simple clé USB bootable pour un PC, qui nécessite souvent seulement le transfert d'un chargeur d'amorçage et d'un système d'exploitation minimal pour démarrer l'installation
-- Raspberry Pi Imager installe directement le système d'exploitation sur la carte SD, plutôt que de créer une simple clé bootable. Cela signifie que le Raspberry Pi peut démarrer et fonctionner immédiatement à partir de la carte SD, sans nécessiter d'installation ou de configuration supplémentaires de la part de l'utilisateur.
+- Contrairement à la création d'une simple clé USB bootable pour un PC, qui nécessite souvent seulement le transfert d'un chargeur d'amorçage et d'un système d'exploitation minimal pour démarrer l'installation.
+  
+- Raspberry Pi Imager 
+  
+  Il installe directement le système d'exploitation sur la carte SD, plutôt que de créer une simple clé bootable. 
+  
+  Cela signifie que le Raspberry Pi peut démarrer et fonctionner immédiatement à partir de la carte SD, sans nécessiter d'installation ou de configuration supplémentaires de la part de l'utilisateur.
 
-Pour flasher une image sur une carte SD, vous aurez besoin d'un logiciel de gravure d'image disque. Raspberry Pi Imager est un outil gratuit et open-source qui vous permet de flasher des images sur des cartes SD, des clés USB, et d'autres supports de stockage. Voici comment utiliser Raspberry Pi Imager pour flasher une image Debian sur une carte SD :
+Pour flasher une image sur une carte SD, vous aurez besoin d'un logiciel de gravure d'image disque.
+
+Raspberry Pi Imager est un outil gratuit et open-source qui vous permet de flasher des images sur des cartes SD, des clés USB, et d'autres supports de stockage. 
+
+Voici comment utiliser Raspberry Pi Imager pour flasher une image Debian sur une carte SD :
 
 - Téléchargement de raspberry Pi Imager
   - [raspberry Pi Imager](https://www.raspberrypi.org/software/) 
@@ -152,8 +189,11 @@ root | aucun
 ### Configuration du clavier
 
 #### Gestionnaire de paquets
+
 - C'est un outil logiciel qui automatise le processus d'installation, de mise à jour, de configuration et de suppression de logiciels sur le système d'exploitation d'un ordinateur.
+  
 - Les gestionnaires de paquets sont un composant essentiel des systèmes d'exploitation modernes, fournissant une interface cohérente pour gérer les logiciels et leurs dépendances, et garantissant ainsi l'intégrité et la stabilité du système. 
+  
 - Ils sont particulièrement prévalents et importants dans les systèmes d'exploitation basés sur Linux, mais des versions existent également pour Windows et macOS.
 
 <details>
@@ -161,14 +201,19 @@ root | aucun
 <summary>Fonctionnalités Clés</summary>
 
 - **Installation de logiciels** : Permettent d'installer facilement des logiciels à partir de sources centralisées appelées dépôts ou repositories.
+  
 - **Gestion des dépendances** : Résolvent automatiquement les dépendances requises par un logiciel, évitant ainsi à l'utilisateur de devoir les installer manuellement.
+  
 - **Mises à jour et upgrades** : Facilitent la mise à jour des logiciels installés vers les dernières versions disponibles, améliorant ainsi la sécurité et la fonctionnalité.
+  
 - **Configuration et personnalisation** : Certains gestionnaires de paquets permettent de configurer et de personnaliser les logiciels au moment de l'installation.
+  
 - **Suppression propre** : Permettent de supprimer les logiciels de manière à ne laisser aucun fichier résiduel inutile.
 
 </details>
 
 #### Apt update
+
 **apt update** permet de s'assurer que votre système dispose des informations les plus récentes sur les paquets et les versions disponibles, ce qui est crucial avant d'installer de nouveaux paquets ou de mettre à jour des paquets existants avec la commande apt upgrade ou apt install.
 
 ```bash
@@ -499,17 +544,18 @@ Nous allons changer le shell par défaut qui est bash pour zsh. zsh est un shell
 
 ### Télechargement des scripts d'installation 
 
+#### méthode avec git clone
 - Nous allons utiliser git pour télécharger les scripts d'installation.
 
   La commande git clone permet de copier un dépôt (repository) existant dans un nouveau dossier. Vous aurez acces aux fichiers et à l'historique de version du projet, et vous pourrez contribuer au projet en poussant vos modifications, recupérer les modifications des autres et fusionner les modifications dans votre copie locale.
 
   Ici le but et juste d'avoir les scripts d'installation.
 
-
   ```bash
   git clone "https://github.com/aGrellard/documentations_linux.git" -o ./
   ```
 
+#### méthode avec curl et unzip
 - Nous pourrions aussi télécharger les scripts d'installation avec la commande curl :
 
   ```bash
@@ -546,12 +592,29 @@ Déplaçons nous dans le dossier contenant les scripts d'installation avec la co
   cd documentations_linux-main/_C0_SCRIPTS_LINUX
   ```
 
-Ensuite nous allons donner les **droits d'exécution** aux scripts d'installation :
+### Rendre les scripts d'installation exécutable
+
+#### `chmod`
+
+##### À quoi sert `chmod +x` ?
+- **Rendre un script exécutable** : Si vous avez un script shell (`.sh`), Python (`.py`), ou tout autre script que vous souhaitez exécuter directement comme une commande, vous devez le rendre exécutable avec `chmod +x`.
+- **Exécuter des programmes** : Après la compilation d'un programme, pour l'exécuter directement sans utiliser un interpréteur ou un compilateur, vous devez lui donner des permissions d'exécution.
+- **Résoudre les problèmes de permissions** : Si vous téléchargez ou recevez un script ou un programme qui est supposé être exécutable mais qui ne l'est pas à cause des permissions de fichier, utiliser `chmod +x` résout ce problème.
+
+##### Exemple
+```bash
+chmod +x mon_script.sh
+```
+>Cet exemple rend le script `mon_script.sh` exécutable. Après avoir exécuté cette commande, l'utilisateur peut lancer le script en utilisant `./mon_script.sh` depuis le terminal, à condition d'être dans le même répertoire que le script.
+
+Nous allons donner les **droits d'exécution** aux scripts d'installation :
 
 ```bash
 chmod +x installation_paquets.sh
 chmod +x installation_plugins.sh
 ```
+
+### Utilisation des scripts d'installation
 
 le script `installation_paquets.sh` va installer les paquets nécessaires pour zsh si il ne sont pas déjà installés (il va aussi installer **tmux** ainsi que **unzip**), il va telecharger l'installateur de ohmyzsh et lancer l'installation de zsh.
 
