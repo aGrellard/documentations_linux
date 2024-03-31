@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mkdocs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mkdocs_container
+    ports:
+      - "8800:8000"
+    volumes:
+      - /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX/_B0_DOCU_LINUX/docs:/docs
+      - /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX/_B0_DOCU_LINUX:/config
+    command: serve --dev-addr=0.0.0.0:8000 --config-file /config/mkdocs.yml
