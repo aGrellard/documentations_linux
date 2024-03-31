@@ -14,32 +14,28 @@ if [ "$(id -u)" -ne 0 ]; then
     error "Ce script doit être exécuté avec des privilèges de superutilisateur."
 fi
 
+
+# desisntaller les anciennes versions de docker
+echo "Désinstallation des anciennes versions de Docker..."
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
 # Mise à jour des paquets et installation des dépendances nécessaires pour ajouter un nouveau dépôt
 echo "Mise à jour des paquets existants et installation des dépendances nécessaires..."
 apt-get update
-apt-get install -y ca-certificates curl || error "L'installation des dépendances nécessaires a échoué."
 
-# Création du répertoire pour les clés GPG de Docker, si nécessaire
-echo "Création du répertoire pour les clés GPG de Docker..."
-install -m 0755 -d /etc/apt/keyrings
 
-# Ajout de la clé GPG officielle de Docker
-echo "Ajout de la clé GPG officielle de Docker..."
-curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
-chmod a+r /etc/apt/keyrings/docker.asc
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Ajout du dépôt Docker aux sources APT
-echo "Ajout du dépôt Docker aux sources APT..."
-VERSION_CODENAME=$(. /etc/os-release && echo "$VERSION_CODENAME")
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $VERSION_CODENAME stable" | \
-tee /etc/apt/sources.list.d/docker.list > /dev/null
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+sudo apt-get update
 
-# Mise à jour des paquets après l'ajout du nouveau dépôt Docker
-echo "Mise à jour des paquets pour reconnaître le nouveau dépôt Docker..."
-apt-get update
-
-# Installation des paquets Docker
-echo "Installation des paquets Docker..."
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin || error "L'installation des paquets Docker a échoué."
-
-echo "L'installation de Docker est terminée avec succès."
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
