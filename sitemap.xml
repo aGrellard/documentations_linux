@@ -121,11 +121,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/blog/20240404/iptables_A_to-MAC/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://agrellard.github.io/documentations_linux/blog/20240404/rsync/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -267,11 +262,6 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/dpkg-reconfiure/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/_A2_atrier/___categorie/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -582,71 +572,6 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_linux/langages/bash/typeset/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/arithmetiques/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/chaines/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/chaines_operateurs/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/condition_composite/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/conditions/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/fichiers/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/operateurs_logiques/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/structure_boucles/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/structure_conditionelle/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/tableaux/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/variables/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/variables_environnement/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/langages/bash/_A1_doc/variables_special/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
