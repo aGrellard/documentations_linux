@@ -1,0 +1,10 @@
+- (https://www.it-connect.fr/configurer-un-pare-feu-local-sous-debian-11-avec-ufw/)
+- (https://github.com/gpakosz/.tmux/blob/master/.tmux.conf)
+- (https://freefilesync.org/manual.php?topic=command-line)
+- (https://www.youtube.com/watch?v=1aXPuFrPtr0)
+- (https://tmuxcheatsheet.com/tmux-plugins-tools/)
+- (https://dockercheatsheet.com/)
+- [samba](https://chat.openai.com/c/4ce9e11d-580a-4224-bf8d-0b85904e1479)
+- [docker](https://chat.openai.com/g/g-HMNcP6w7d-data-analyst/c/878c7f2d-9cf7-4c4f-ab32-6a37bb035166)
+- [bash](https://chat.openai.com/g/g-HMNcP6w7d-data-analyst/c/0d038648-13f3-423c-a7db-58e0922b8935)
+- 

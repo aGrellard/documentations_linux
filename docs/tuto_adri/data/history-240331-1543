@@ -1,0 +1,59 @@
+    1  chsh $(which zsh)
+    2  cd Documents
+    3  cd documentations_linux/_C0_SCRIPTS_LINUX
+    4  cd installation_debian
+    5  chmod +x install_ohmyzsh.sh
+    6  ./install_ohmyzsh.sh
+    8  ./installation_plugins.sh
+   10  exit
+   11  ls -la /media/adrien
+   14  sudo passwd adrien
+   15  sudo passwd root
+   16  su root
+   18  sudo apt install ranger xclip unzip wget curl
+   19  cd Documents/documentations_linux/_C0_SCRIPTS_LINUX/installation_debian
+   21  ./installation_vscode.sh
+   22  sudo ./installation_vscode.sh
+   23  ls -la
+   24  sudo ./installation_docker.sh
+   26  sudo ./installation_vbox.sh
+   27  sudo apt update
+   28  sudo apt search freefilesync
+   29  sudo apt infos freefilesync
+   30  sudo apt --help
+   31  sudo apt show freefilesync
+   32  sudo apt update && sudo apt instal freefilesync
+   33  sudo apt update && sudo apt install freefilesync
+   34  sudo apt show ufw
+   35  sudo ufw
+   36  sudo apt install ufw
+   37  docker --version
+   38  docker ps -a
+   39  sudo docker ps -a
+   40  code --add /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX
+   41  cd ../../_B0_DOCU_LINUX/docs/
+   42  find . -iname "*ssh*"
+   43  cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md
+   45  ssh-keygen
+   46  cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md | less
+   49  tmux
+   50  cat ~/.ssh/id_rsa.pub
+   52* ssh-add ~/.ssh/id_rsa.pub
+   53* eval "$(ssh-agent -s)"
+   54* chmod 600 /home/adrien/.ssh/id_rsa
+   55* ssh-add ~/.ssh/id_rsa
+   56* ssh adrien@192.168.0.35
+   57  sudo ufw status
+   58  sudo -i
+   59  sudo -S --help
+   60  sudo -S
+   61  sudo apt search gvfs
+   62  sudo apt install gvfs gvfs-backends gvfs-common xfce4-goodies
+   63  gvfs
+   64  sudo apt install smbclient
+   65  sudo apt install avahi-daemon
+   66  sudo systemctl status avahi-daemon
+   67  thunar -q
+   68  history
+   69  sudo apt install hstr
+   70  echo "$(history)"

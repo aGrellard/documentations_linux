@@ -1,0 +1,76 @@
+: 1711886658:0;chsh $(which zsh)
+: 1711886679:0;cd Documents
+: 1711886705:0;cd documentations_linux/_C0_SCRIPTS_LINUX
+: 1711886721:0;cd installation_debian
+: 1711886751:0;chmod +x install_ohmyzsh.sh
+: 1711886759:0;./install_ohmyzsh.sh
+: 1711886774:0;ls -la
+: 1711886791:0;./installation_plugins.sh
+: 1711886826:0;tmux
+: 1711886829:0;exit
+: 1711886884:0;ls -la /media/adrien
+: 1711887037:0;tmux
+: 1711887840:0;sudo apt update
+: 1711887857:0;sudo passwd adrien
+: 1711887882:0;sudo passwd root
+: 1711887900:0;su root
+: 1711887916:0;sudo apt update
+: 1711887939:0;sudo apt install ranger xclip unzip wget curl
+: 1711887966:0;cd Documents/documentations_linux/_C0_SCRIPTS_LINUX/installation_debian
+: 1711887970:0;ls -la
+: 1711887984:0;./installation_vscode.sh
+: 1711887990:0;sudo ./installation_vscode.sh
+: 1711888017:0;ls -la
+: 1711888031:0;sudo ./installation_docker.sh
+: 1711888056:0;sudo apt update
+: 1711888076:0;sudo ./installation_vbox.sh
+: 1711888118:0;sudo apt update
+: 1711888142:0;sudo apt search freefilesync
+: 1711888155:0;sudo apt infos freefilesync
+: 1711888168:0;sudo apt --help
+: 1711888182:0;sudo apt show freefilesync
+: 1711888207:0;sudo apt update && sudo apt instal freefilesync
+: 1711888216:0;sudo apt update && sudo apt install freefilesync
+: 1711888242:0;sudo apt show ufw
+: 1711888247:0;sudo ufw
+: 1711888258:0;sudo apt install ufw
+: 1711888372:0;docker --version
+: 1711888380:0;docker ps -a
+: 1711888386:0;sudo docker ps -a
+: 1711890076:0;code --add /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX
+: 1711890151:0;cd ../../_B0_DOCU_LINUX/docs/
+: 1711890169:0;find . -iname "*ssh*"
+: 1711890200:0;cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md
+: 1711890212:0;cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md | less
+: 1711890250:0;ssh-keygen
+: 1711890272:0;cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md | less
+: 1711890410:0;cat ~/.ssh/id_rsa.pub
+: 1711890433:0;ssh adrien@192.168.0.35
+: 1711890910:0;tmux
+: 1711890931:0;cat ~/.ssh/id_rsa.pub
+: 1711891046:0;ssh adrien@192.168.0.35
+: 1711891230:0;ssh-add ~/.ssh/id_rsa.pub
+: 1711891429:0;eval "$(ssh-agent -s)"
+: 1711891451:0;chmod 600 /home/adrien/.ssh/id_rsa
+: 1711891469:0;ssh-add ~/.ssh/id_rsa
+: 1711891480:0;ssh adrien@192.168.0.35
+: 1711891496:0;sudo ufw status
+: 1711891785:0;sudo -i
+: 1711891905:0;sudo -S --help
+: 1711891916:0;sudo -S
+: 1711892095:0;sudo apt search gvfs
+: 1711892183:0;sudo apt install gvfs gvfs-backends gvfs-common xfce4-goodies
+: 1711892234:0;gvfs
+: 1711892313:0;sudo apt install smbclient
+: 1711892349:0;sudo apt install avahi-daemon
+: 1711892371:0;sudo systemctl status avahi-daemon
+: 1711892430:0;thunar -q
+: 1711892466:0;history
+: 1711892562:0;sudo apt install hstr
+: 1711892588:0;echo "$(history)"
+: 1711892646:0;echo "$(history)" > /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX/_B0_DOCU_LINUX/docs/tuto_adri/history-240331-1543
+: 1711892660:0;hstr
+: 1711892665:0;ranger
+: 1711892692:0;ufw
+: 1711892718:0;history
+: 1711892788:0;cat ~/.zsh_history > /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX/_B0_DOCU_LINUX/docs/tuto_adri/zsh_history-240331-1546
