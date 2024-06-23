@@ -1,0 +1,32 @@
+   32  sudo apt update && sudo apt instal freefilesync                                         
+   33  sudo apt update && sudo apt install freefilesync                                        
+   34  sudo apt show ufw                                                                       
+   35  sudo ufw                                                                                
+   36  sudo apt install ufw                                                                    
+   37  docker --version                                                                        
+   38  docker ps -a                                                                            
+   39  sudo docker ps -a                                                                       
+   40  code --add /media/adrien/data/_B0_PROGRAMMATION/_I1_LINUX                               
+   41  cd ../../_B0_DOCU_LINUX/docs/                                                           
+   42  find . -iname "*ssh*"                                                                   
+   43  cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md                                     
+   45  ssh-keygen                                                                              
+   46  cat ./server/sysadmin/ssh/ssh_clé-de-chiffrement.md | less                              
+   49  tmux                                                                                    
+   50  cat ~/.ssh/id_rsa.pub                                                                   
+   52* ssh-add ~/.ssh/id_rsa.pub                                                               
+   53* eval "$(ssh-agent -s)"                                                                  
+   54* chmod 600 /home/adrien/.ssh/id_rsa                                                      
+   55* ssh-add ~/.ssh/id_rsa                                                                   
+   56* ssh adrien@192.168.0.35                                                                 
+   57  sudo ufw status                                                                         
+   58  sudo -i                                                                                 
+   59  sudo -S --help                                                                          
+   60  sudo -S                                                                                 
+   61  sudo apt search gvfs                                                                    
+   62  sudo apt install gvfs gvfs-backends gvfs-common xfce4-goodies                           
+   63  gvfs                                                                                    
+   64  sudo apt install smbclient                                                              
+   65  sudo apt install avahi-daemon                                                           
+   66  sudo systemctl status avahi-daemon                                                      
+   67  thunar -q                                                                               
