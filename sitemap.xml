@@ -31,96 +31,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/build-essential/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/cron/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/debian_alt_click/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/debian_ctrl_alt_fleche/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/dnsutils/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/fstab/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/gestionnaire_de_paquets/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/groups/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/instal_debian/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/mount/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/mount_samba/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/ntfs-3g/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/path_scripts/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/raccourcis/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/redirections/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/terminal_raccourci_clavier/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/utilisateurs/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_linux/adminlinux/utils/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://agrellard.github.io/documentations_linux/blog/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -371,6 +281,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/dnsutils/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/dpkg-reconfiure/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -382,6 +297,11 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/droits_permissions/chown/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/droits_permissions/groups/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -486,6 +406,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/gestion_utilisateurs_groupes/utilisateurs/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/reseau/hostname/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -501,12 +426,87 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/build-essential/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/cron/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/debian_alt_click/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/debian_ctrl_alt_fleche/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/fstab/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/instal_debian/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/mount/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/mount_samba/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/ntfs-3g/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/path_scripts/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/systeme/redirections/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/find/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/gestionnaire_de_paquets/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/lsof/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/raccourcis/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/terminal_raccourci_clavier/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/utils/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
