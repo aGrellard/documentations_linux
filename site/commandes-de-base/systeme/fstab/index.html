@@ -429,9 +429,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6763,6 +6761,416 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monter-un-disque-dur-ou-une-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monter un disque dur ou une partition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monter un disque dur ou une partition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-identifier-le-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Identifier le Disque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creer-un-point-de-montage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Créer un Point de Montage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-obtenir-luuid-du-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Obtenir l'UUID du Disque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modifier-le-fichier-etcfstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Modifier le Fichier /etc/fstab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tester-le-montage" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Tester le Montage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Vérification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-redemarrage-et-verification-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Redémarrage et Vérification Automatique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-options-de-montage-dans-le-fichier-etcfstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les options de montage dans le fichier /etc/fstab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les options de montage dans le fichier /etc/fstab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options Générales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-de-securite-et-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options de Sécurité et d'Accès
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Erreurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-et-fiabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance et Fiabilité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-specifiques-au-type-de-systeme-de-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options Spécifiques au Type de Système de Fichiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options Avancées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sauvegarde-et-restauration-avec-dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sauvegarde et Restauration avec dump
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sauvegarde et Restauration avec dump">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-dune-ligne-fstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure d'une Ligne fstab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurer-le-champ-dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurer le Champ Dump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conseils-pour-la-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils pour la Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsck-verification-et-reparation-des-systemes-de-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      fsck : Vérification et Réparation des Systèmes de Fichiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fsck : Vérification et Réparation des Systèmes de Fichiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valeurs-et-significations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valeurs et Significations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conseils-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils d'Utilisation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monter-un-system-de-fichiers-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monter un system de fichiers samba
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monter un system de fichiers samba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-installer-les-paquets-necessaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Installer les Paquets Nécessaires
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creer-un-point-de-montage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Créer un Point de Montage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-monter-le-partage-manuellement-optionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Monter le Partage Manuellement (Optionnel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configuration-pour-le-montage-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configuration pour le Montage Automatique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configuration pour le Montage Automatique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securiser-les-identifiants-de-connexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sécuriser les Identifiants de Connexion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-la-ligne-dans-etcfstab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter la Ligne dans /etc/fstab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#montage-automatique-avec-username-et-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Montage Automatique avec username et password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uid-et-gid" class="md-nav__link">
+    <span class="md-ellipsis">
+      uid et gid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="uid et gid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-lacces-aux-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de l'Accès aux Fichiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple Pratique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -7114,7 +7522,7 @@ password=votre_mot_de_passe
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

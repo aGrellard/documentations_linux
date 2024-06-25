@@ -431,9 +431,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6730,6 +6728,381 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informations-sur-le-script-et-lenvironnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informations sur le Script et l'Environnement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations sur le Script et l'Environnement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-le-nom-du-script-ou-de-la-commande-executee" class="md-nav__link">
+    <span class="md-ellipsis">
+      $0 : Le nom du script ou de la commande exécutée.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash_version-la-version-du-bash-executant-le-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      $BASH_VERSION : La version du Bash exécutant le script.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash_versinfo-un-tableau-contenant-des-informations-de-version-detaillees-sur-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      $BASH_VERSINFO : Un tableau contenant des informations de version détaillées sur Bash.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostname-le-nom-dhote-de-la-machine-sur-laquelle-le-script-est-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      $HOSTNAME : Le nom d'hôte de la machine sur laquelle le script est exécuté.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lang-la-configuration-de-langue-courante-affectant-la-localisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      $LANG : La configuration de langue courante, affectant la localisation.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ostype-une-description-du-systeme-dexploitation-sur-lequel-bash-est-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      $OSTYPE : Une description du système d'exploitation sur lequel Bash est exécuté.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-les-chemins-des-repertoires-ou-bash-cherche-les-commandes-executables" class="md-nav__link">
+    <span class="md-ellipsis">
+      $PATH : Les chemins des répertoires où Bash cherche les commandes exécutables.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd-le-repertoire-de-travail-actuel" class="md-nav__link">
+    <span class="md-ellipsis">
+      $PWD : Le répertoire de travail actuel.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oldpwd-le-precedent-repertoire-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      $OLDPWD : Le précédent répertoire de travail.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shlvl-le-niveau-de-linterpreteur-de-commandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      $SHLVL : Le niveau de l'interpréteur de commandes.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#term-le-type-de-terminal-utilise-pour-lexecution-du-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      $TERM : Le type de terminal utilisé pour l'exécution du script.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informations-sur-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informations sur l'Utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations sur l'Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home-le-chemin-du-repertoire-personnel-de-lutilisateur-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      $HOME : Le chemin du répertoire personnel de l'utilisateur courant.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uid-lid-utilisateur-du-processus-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      $UID : L'ID utilisateur du processus courant.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euid-lid-utilisateur-effectif-du-processus-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      $EUID : L'ID utilisateur effectif du processus courant.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups-un-tableau-contenant-la-liste-des-groupes-auxquels-appartient-lutilisateur-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      $GROUPS : Un tableau contenant la liste des groupes auxquels appartient l'utilisateur courant.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-processus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Processus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Processus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-pid-du-script-en-cours-dexecution" class="md-nav__link">
+    <span class="md-ellipsis">
+      $$ : Le PID du script en cours d'exécution.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-pid-du-dernier-processus-execute-en-arriere-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      $! : Le PID du dernier processus exécuté en arrière-plan.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ppid-le-pid-du-processus-parent-du-script-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      $PPID : Le PID du processus parent du script courant.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-et-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments et Paramètres
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments et Paramètres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-9-10-n-les-arguments-passes-au-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      $1 ... $9, ${10} ... ${N} : Les arguments passés au script.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-nombre-darguments-passes-au-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      $# : Le nombre d'arguments passés au script.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tous-les-arguments-passes-au-script-est-preferable-lorsque-vous-voulez-traiter-chaque-argument-separement-dans-les-guillemets" class="md-nav__link">
+    <span class="md-ellipsis">
+      $*, $@ : Tous les arguments passés au script. $@ est préférable lorsque vous voulez traiter chaque argument séparément dans les guillemets.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controle-de-flux-et-etat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôle de Flux et État
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contrôle de Flux et État">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-statut-de-sortie-de-la-derniere-commande-executee" class="md-nav__link">
+    <span class="md-ellipsis">
+      $? : Le statut de sortie de la dernière commande exécutée.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-les-options-actuelles-definies-pour-le-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      $- : Les options actuelles définies pour le shell.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ifs-le-separateur-de-champs-internes-utilise-pour-diviser-les-lignes-en-mots" class="md-nav__link">
+    <span class="md-ellipsis">
+      $IFS : Le séparateur de champs internes, utilisé pour diviser les lignes en mots.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Divers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Divers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lineno-le-numero-de-la-ligne-courante-dans-le-script-bash-utile-pour-le-debogage" class="md-nav__link">
+    <span class="md-ellipsis">
+      $LINENO : Le numéro de la ligne courante dans le script Bash, utile pour le débogage.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-genere-un-nombre-aleatoire-entre-0-et-32767" class="md-nav__link">
+    <span class="md-ellipsis">
+      $RANDOM : Génère un nombre aléatoire entre 0 et 32767.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seconds-le-nombre-de-secondes-depuis-que-le-script-a-ete-lance" class="md-nav__link">
+    <span class="md-ellipsis">
+      $SECONDS : Le nombre de secondes depuis que le script a été lancé.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reply-la-derniere-chaine-lue-par-la-commande-read-lorsque-aucune-variable-nest-fournie" class="md-nav__link">
+    <span class="md-ellipsis">
+      $REPLY : La dernière chaîne lue par la commande read lorsque aucune variable n'est fournie.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histsize-histfilesize-gerent-respectivement-le-nombre-de-commandes-a-conserver-dans-lhistorique-et-la-taille-du-fichier-dhistorique" class="md-nav__link">
+    <span class="md-ellipsis">
+      $HISTSIZE, $HISTFILESIZE : Gèrent respectivement le nombre de commandes à conserver dans l'historique et la taille du fichier d'historique.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6930,7 +7303,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

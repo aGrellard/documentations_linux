@@ -429,9 +429,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6468,6 +6466,123 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generer-une-paire-de-cles-ssh-sur-le-client-debian-12-et-la-copier-sur-le-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Générer une paire de clés SSH sur le client Debian 12 et la copier sur le serveur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Générer une paire de clés SSH sur le client Debian 12 et la copier sur le serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-generer-une-paire-de-cles-ssh-sur-le-client-debian-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Générer une paire de clés SSH sur le client Debian 12
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-copier-la-cle-publique-sur-le-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Copier la clé publique sur le serveur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tester-la-connexion-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tester la connexion SSH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiliser-un-agent-ssh-optionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser un agent SSH (optionnel)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utiliser un agent SSH (optionnel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-demarrer-lagent-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Démarrer l'Agent SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ajouter-votre-cle-privee-a-lagent-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ajouter votre clé privée à l'agent SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connexion-ssh-sans-entrer-la-passphrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Connexion SSH sans entrer la passphrase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remarques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remarques :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6628,7 +6743,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

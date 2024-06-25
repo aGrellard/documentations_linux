@@ -429,9 +429,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6636,6 +6634,291 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-de-la-fonction-ps-aux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation de la fonction ps aux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation de la fonction ps aux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-se-decompose-comme-suit" class="md-nav__link">
+    <span class="md-ellipsis">
+      La commande se décompose comme suit :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-detailles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramètres détaillés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'utilisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples d'utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-afficher-tous-les-processus-en-cours" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Afficher tous les processus en cours:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-afficher-les-processus-dun-utilisateur-specifique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Afficher les processus d'un utilisateur spécifique:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trier-les-processus-par-utilisation-de-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Trier les processus par utilisation de CPU:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trier-les-processus-par-utilisation-de-memoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Trier les processus par utilisation de mémoire:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-afficher-les-informations-dun-processus-specifique-par-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Afficher les informations d'un processus spécifique par PID:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-afficher-les-processus-pour-un-utilisateur-donne" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Afficher les processus pour un utilisateur donné:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-trouver-des-processus-dun-programme-specifique" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Trouver des processus d'un programme spécifique:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-afficher-les-processus-sans-terminal-de-controle" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Afficher les processus sans terminal de contrôle:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-afficher-les-processus-en-etat-de-sommeil-ininterruptible" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Afficher les processus en état de sommeil ininterruptible:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-lister-les-10-premiers-processus-par-utilisation-de-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Lister les 10 premiers processus par utilisation de CPU:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dutilisation-sans-pipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas d'utilisation sans pipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dutilisation-avec-des-pipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas d'utilisation avec des pipes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cas d'utilisation avec des pipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-trouver-les-processus-consommant-le-plus-de-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Trouver les processus consommant le plus de CPU:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trouver-les-processus-consommant-le-plus-de-memoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Trouver les processus consommant le plus de mémoire:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-compter-le-nombre-de-processus-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Compter le nombre de processus d'un utilisateur:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tuer-tous-les-processus-dun-utilisateur-avec-prudence" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tuer tous les processus d'un utilisateur (avec prudence) :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-trouver-un-processus-par-nom-et-voir-son-utilisation-de-la-memoire-et-du-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Trouver un processus par nom et voir son utilisation de la mémoire et du CPU:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-afficher-les-processus-en-etat-de-sommeil-ininterruptible-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Afficher les processus en état de sommeil ininterruptible (D):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-lister-les-processus-dun-groupe-specifique-par-gid" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lister les processus d'un groupe spécifique (par GID):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-afficher-les-processus-qui-ont-demarre-apres-une-certaine-heure" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Afficher les processus qui ont démarré après une certaine heure:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-trouver-les-processus-sans-terminal-de-controle" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Trouver les processus sans terminal de contrôle:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-affiner-la-recherche-dun-processus-specifique-et-trier-par-utilisation-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Affiner la recherche d'un processus spécifique et trier par utilisation CPU:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6841,7 +7124,7 @@ ps aux | grep &#39;python&#39; | sort -rk 3,3
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

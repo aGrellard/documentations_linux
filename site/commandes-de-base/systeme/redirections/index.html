@@ -429,9 +429,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6523,6 +6521,176 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redirections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redirections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rediriger-la-sortie-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rediriger la sortie standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rediriger-lerreur-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rediriger l'erreur standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rediriger-a-la-fois-la-sortie-standard-et-lerreur-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rediriger à la fois la sortie standard et l'erreur standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rediriger-lentree-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rediriger l'entrée standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-avances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples avancés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples avancés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compter-le-nombre-de-fichiers-dans-un-repertoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compter le nombre de fichiers dans un répertoire :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trouver-un-fichier-specifique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouver un fichier spécifique :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-fichier-sans-commande-dentree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer un fichier sans commande d'entrée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatener-des-fichiers-en-redirigeant-lentree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concaténer des fichiers en redirigeant l'entrée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulation-et-analyse-des-flux-des" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation et analyse des flux d'E/S
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dupliquer-des-descripteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple : Dupliquer des descripteurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple : Dupliquer des descripteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-de-tee-pour-la-duplication-de-sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de tee pour la duplication de sortie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6713,7 +6881,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

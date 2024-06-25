@@ -429,9 +429,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
@@ -6784,6 +6782,437 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-de-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options de usermod
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options de usermod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-c-comment-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      -c , --comment COMMENT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-d-home-repertoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      -d , --home RÉPERTOIRE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-e-expiredate-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      -e , --expiredate DATE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-f-inactive-jours" class="md-nav__link">
+    <span class="md-ellipsis">
+      -f , --inactive JOURS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-g-gid-groupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      -g , --gid GROUPE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-g-groups-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      -G , --groups GROUPES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-l-login-nouveau_nom" class="md-nav__link">
+    <span class="md-ellipsis">
+      -l , --login NOUVEAU_NOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-l-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      -L , --lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-m-move-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      -m , --move-home
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-p-password-mot_de_passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      -p , --password MOT_DE_PASSE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-s-shell-interpreteur" class="md-nav__link">
+    <span class="md-ellipsis">
+      -s , --shell INTERPRÉTEUR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-u-unlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      -U , --unlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-u-uid-uid" class="md-nav__link">
+    <span class="md-ellipsis">
+      -u , --uid UID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-o-non-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      -o, --non-unique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-z-selinux-user-selinux_user" class="md-nav__link">
+    <span class="md-ellipsis">
+      -Z, --selinux-user SELinux_USER
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'utilisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples d'utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-changer-le-repertoire-personnel-de-lutilisateur-et-deplacer-le-contenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Changer le répertoire personnel de l'utilisateur et déplacer le contenu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-changer-le-shell-de-connexion-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Changer le shell de connexion de l'utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-changer-le-groupe-primaire-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Changer le groupe primaire de l'utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ajouter-lutilisateur-a-des-groupes-supplementaires-sans-retirer-les-groupes-existants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ajouter l'utilisateur à des groupes supplémentaires sans retirer les groupes existants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-changer-luid-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Changer l'UID de l'utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verrouiller-le-compte-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verrouiller le compte d'un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-deverrouiller-le-compte-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Déverrouiller le compte d'un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-definir-une-date-dexpiration-pour-le-compte-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Définir une date d'expiration pour le compte utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-modifier-le-nombre-de-jours-dinactivite-apres-expiration-du-mot-de-passe" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Modifier le nombre de jours d'inactivité après expiration du mot de passe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-retirer-lutilisateur-de-tous-les-groupes-sauf-le-groupe-primaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Retirer l'utilisateur de tous les groupes sauf le groupe primaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dutilisation-de-la-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas d'utilisation de la fonction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cas d'utilisation de la fonction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mise-a-jour-du-shell-par-defaut-pour-un-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mise à jour du shell par défaut pour un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-changement-de-groupe-primaire-lors-de-la-reorganisation-des-equipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Changement de groupe primaire lors de la réorganisation des équipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-securisation-dun-compte-apres-le-depart-dun-employe" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sécurisation d'un compte après le départ d'un employé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-correction-de-luid-dun-utilisateur-apres-une-mauvaise-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Correction de l'UID d'un utilisateur après une mauvaise création
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ajout-dun-utilisateur-a-des-groupes-supplementaires-pour-accorder-des-permissions-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Ajout d'un utilisateur à des groupes supplémentaires pour accorder des permissions spécifiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-migration-dun-utilisateur-vers-un-nouveau-repertoire-personnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Migration d'un utilisateur vers un nouveau répertoire personnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-modification-du-nom-de-connexion-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Modification du nom de connexion d'un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-activation-dun-compte-expire" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Activation d'un compte expiré
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-mise-a-jour-des-groupes-dun-utilisateur-apres-une-promotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Mise à jour des groupes d'un utilisateur après une promotion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-restauration-des-parametres-par-defaut-dun-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Restauration des paramètres par défaut d'un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-verrouillage-dun-compte-pour-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Verrouillage d'un compte pour maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-changement-des-proprietes-dun-compte-systeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Changement des propriétés d'un compte système
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils d'Utilisation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -7133,7 +7562,7 @@ Cela change le groupe primaire de `daemonuser` en `nogroup` et désactive le she
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
