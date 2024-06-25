@@ -1,20 +1,20 @@
 # Fichier de configuration du site à personnaliser
 ### Configuration minimale
-site_name: Base MkDocs Material # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
-site_url: https://ericecmorlaix.github.io/base_mkdocs_material/ # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
+site_name: DocuLinux # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
+site_url: https://agrellard.github.io/documentations_linux/ # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
 
 ### Configuration du dépôt
 # Ajoute en haut à droite de chaque page du site, icône, nom et lien vers le dépot GitHub du projet.
-repo_url: https://github.com/ericECmorlaix/base_mkdocs_material
-repo_name: 'base_mkdocs_material' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
+repo_url: https://github.com/aGrellard/documentations_linux
+repo_name: 'documentations_linux' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
 edit_uri: edit/main/docs/ # Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ;
 # Ce qui permet avec MkDocs-Material d'ajouter un bouton (crayon) d'édition du code source.md d'une page du site depuis le navigateur
 # (edit => édition avec connexion | blob, tree => lecture anonyme)
 
 ### Configuration de métadonnées
 # Métadonnées de description <300 caratères, et d'auteur pour toutes les pages du site 
-site_description: Exemple de site de base pour MkDocs avec le thème Material à personaliser
-site_author: "Eric MADEC"
+site_description: Documentation pour linux
+site_author: "aGrellard"
 
 ### Configuration de la stucture de navigation
 # Dossier source, chemin relatif au fichier mkdocs.yml
@@ -53,7 +53,7 @@ theme:
         - content.action.view # pour voir le code de la page en cliquant sur l'oeil
         - navigation.instant # active XHR https://fr.wikipedia.org/wiki/XMLHttpRequest
         - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
-        - navigation.expand
+        # - navigation.expand
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         - navigation.top # bouton pour remonter tout en haut de la page
         - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
@@ -71,7 +71,8 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Boite d'avertissements  !!! info "ma remarque"
     - toc:                          # Configuration de la table des matières générée automatiquement à partir des titres du niveau 2
-        permalink: "&num;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        # permalink: "&num;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        permalink: True
         toc_depth: 4                # Limite de la profondeur d'inclusion des titres dans la table des matières
     # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.details              # plier/déplier les avertissements.
@@ -96,34 +97,25 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.arithmatex:          # Formules en LaTeX 
         generic: true
         smart_dollar: false
-
+      
 plugins:
   - search # Inclure une barre de recherche
   # - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter
   #     kernel_name: python3
   #     execute: False
   #     include_source: True
-
-### Configuration d'une licence
-# Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site
-copyright: >
-    Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a>
-    &copy; 2023 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
-    <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
-
-
+  - search
+  - exclude:
+      glob:
+        - '_A*/**'
+        - '*_A*'
+        
 ### Configuration de liens sociaux https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links 
 extra:
   social: # A personaliser...
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:eric.madec@ecmorlaix.fr
-      name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
     - icon: fontawesome/brands/github
-      link: https://github.com/ericECmorlaix/base_mkdocs_material
+      link: https://github.com/aGrellard/documentations_linux
       name: dépôt github
-    - icon: fontawesome/solid/school
-      link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
-      name: Lycée Notre Dame du Mur
 
 # Configuration de javascripts complémentaires
 extra_javascript:
