@@ -20,6 +20,10 @@ site_author: "aGrellard"
 # Dossier source, chemin relatif au fichier mkdocs.yml
 docs_dir: docs
 
+hide:
+  - toc
+  - navigation
+
 # Configuration du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
 theme:
     name: material # autres thèmes : https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
@@ -56,7 +60,7 @@ theme:
         # - navigation.expand
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         - navigation.top # bouton pour remonter tout en haut de la page
-        - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
+        # - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
         - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page
 
 
