@@ -2,6 +2,10 @@
 
 Docker est une plateforme de conteneurisation qui permet de développer, expédier et exécuter des applications dans des conteneurs. Voici comment installer et configurer Docker sur Debian 12 "Bookworm".
 
+## source 
+
+[docker docs](https://docs.docker.com/engine/install/debian/)
+
 ## Prérequis
 
 Avant de commencer, assurez-vous que votre système est à jour :
@@ -24,17 +28,20 @@ sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
 1. **Ajoutez la clé GPG officielle de Docker** :
 
     ```bash
-    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
     ```
 
-2. **Configurez le dépôt Docker** :
+2. **Ajouter le dépot vers les sources du gestionnaire Apt** :
 
     ```bash
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt-get update
     ```
-
-    Remarque : Si vous êtes sur une architecture différente (par exemple, armhf, arm64), remplacez `arch=amd64` par votre architecture.
-
 ## Étape 3 : Installation de Docker Engine
 
 1. **Mettez à jour l'index des paquets `apt`** :
@@ -46,7 +53,7 @@ sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
 2. **Installez Docker Engine** :
 
     ```bash
-    sudo apt install docker-ce docker-ce-cli containerd.io
+     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
 3. **Vérifiez que Docker est installé correctement** en exécutant la commande suivante, qui téléchargera une image de test et la lancera dans un conteneur :

@@ -127,8 +127,10 @@ Prérequis :
 
 ### 1. Télécharger le paquet .deb de VSCode
 
+[site officiel]!(https://code.visualstudio.com/docs/setup/linux)
+
 ```bash
-wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+wget "wget https://go.microsoft.com/fwlink/?LinkID=760868 -O code_latest.deb"
 ```
 
 ### 2. Installer le paquet .deb
