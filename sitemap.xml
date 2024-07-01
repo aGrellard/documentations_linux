@@ -656,6 +656,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_linux/langages/bash/exercices/arithmetiques/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/langages/bash/exercices/chaines-operateurs/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/langages/bash/exercices/chaines/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_linux/langages/bash/exercices/conditions/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_linux/python/python-env/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
