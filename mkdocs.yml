@@ -20,6 +20,8 @@ site_author: "aGrellard"
 # Dossier source, chemin relatif au fichier mkdocs.yml
 docs_dir: docs
 
+# use_directory_urls: false
+
 hide:
   - toc
   - navigation
@@ -65,7 +67,8 @@ theme:
         - navigation.top # bouton pour remonter tout en haut de la page
         # - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
         - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page
-
+        - content.tabs.link
+        - content.code.copy
 
 ### Configuration des extensions MarkDown :        
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
@@ -104,7 +107,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.arithmatex:          # Formules en LaTeX 
         generic: true
         smart_dollar: false
-      
+
 plugins:
   - search # Inclure une barre de recherche
   # - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter

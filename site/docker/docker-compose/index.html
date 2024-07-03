@@ -12,28 +12,28 @@
         <meta name="author" content="aGrellard">
       
       
-        <link rel="canonical" href="https://agrellard.github.io/documentations_linux/langages/awk/Pour%20compl%C3%A9ter%20les%20informations%20sur%20les%20/">
+        <link rel="canonical" href="https://agrellard.github.io/documentations_linux/docker/docker-compose/">
       
       
-        <link rel="prev" href="../../../hardware/nvidia/">
+        <link rel="prev" href="../container_powershell/">
       
       
-        <link rel="next" href="../awk%20est%20un%20langage%20de%20programmation%20de/">
+        <link rel="next" href="../install/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Pour compléter les informations sur les - DocuLinux</title>
+        <title>Docker compose - DocuLinux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manipulation-de-chaines-de-caracteres-supplementaires" class="md-skip">
+        <a href="#documentation-de-docker-compose-sous-debian-12" class="md-skip">
           Aller au contenu
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="DocuLinux" class="md-header__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+    <a href="../.." title="DocuLinux" class="md-header__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pour compléter les informations sur les 
+              Docker compose
             
           </span>
         </div>
@@ -215,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../commandes-de-base/" class="md-tabs__link">
+        <a href="../../commandes-de-base/" class="md-tabs__link">
           
   
   Commandes de base
@@ -266,11 +266,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../docker/container_nodejs-npm-tldr/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../container_nodejs-npm-tldr/" class="md-tabs__link">
           
   
   Docker
@@ -288,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../hardware/GIGABYTE%20GC-WBAX1200/" class="md-tabs__link">
+        <a href="../../hardware/GIGABYTE%20GC-WBAX1200/" class="md-tabs__link">
           
   
   Hardware
@@ -302,21 +304,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../langages/awk/awk%20est%20un%20langage%20de%20programmation%20de/" class="md-tabs__link">
           
   
   Langages
@@ -337,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../python/python-env/" class="md-tabs__link">
+        <a href="../../python/python-env/" class="md-tabs__link">
           
   
   Python
@@ -361,7 +359,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../soft/editeurs_gestionnaires_fichiers/markdown_in_terminal/" class="md-tabs__link">
+        <a href="../../soft/editeurs_gestionnaires_fichiers/markdown_in_terminal/" class="md-tabs__link">
           
   
   Soft
@@ -382,7 +380,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../sysadmin/resolution-nom-reseau/" class="md-tabs__link">
+        <a href="../../sysadmin/resolution-nom-reseau/" class="md-tabs__link">
           
   
   Sysadmin
@@ -400,7 +398,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../tuto_adri/install_nodejs/" class="md-tabs__link">
+        <a href="../../tuto_adri/install_nodejs/" class="md-tabs__link">
           
   
   Tuto adri
@@ -433,7 +431,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+    <a href="../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
@@ -463,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/ACLs/" class="md-nav__link">
+      <a href="../../blog/20240401/ACLs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/Bit-setgid/" class="md-nav__link">
+      <a href="../../blog/20240401/Bit-setgid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/Setting-locale-failed/" class="md-nav__link">
+      <a href="../../blog/20240401/Setting-locale-failed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/bash/" class="md-nav__link">
+      <a href="../../blog/20240401/bash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/docker_compose/" class="md-nav__link">
+      <a href="../../blog/20240401/docker_compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -685,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/joindre_server_local/" class="md-nav__link">
+      <a href="../../blog/20240401/joindre_server_local/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/liens_web/" class="md-nav__link">
+      <a href="../../blog/20240401/liens_web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/systeme-de-fichiers/" class="md-nav__link">
+      <a href="../../blog/20240401/systeme-de-fichiers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/tmux/" class="md-nav__link">
+      <a href="../../blog/20240401/tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/ufw_rules/" class="md-nav__link">
+      <a href="../../blog/20240401/ufw_rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/useradd_adduser/" class="md-nav__link">
+      <a href="../../blog/20240401/useradd_adduser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240401/useradd_smbpasswd/" class="md-nav__link">
+      <a href="../../blog/20240401/useradd_smbpasswd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/code-server/" class="md-nav__link">
+      <a href="../../blog/20240403/code-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/docker_ufw/" class="md-nav__link">
+      <a href="../../blog/20240403/docker_ufw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/homepage/" class="md-nav__link">
+      <a href="../../blog/20240403/homepage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/iptables_mac_tcp80/" class="md-nav__link">
+      <a href="../../blog/20240403/iptables_mac_tcp80/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/jellyfin/" class="md-nav__link">
+      <a href="../../blog/20240403/jellyfin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/journalctl_icmp/" class="md-nav__link">
+      <a href="../../blog/20240403/journalctl_icmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/qbittorrent/" class="md-nav__link">
+      <a href="../../blog/20240403/qbittorrent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240403/scp/" class="md-nav__link">
+      <a href="../../blog/20240403/scp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1092,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240404/ecoute-requette-ping/" class="md-nav__link">
+      <a href="../../blog/20240404/ecoute-requette-ping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240404/ecoute_port-tcp/" class="md-nav__link">
+      <a href="../../blog/20240404/ecoute_port-tcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1134,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240404/rsync/" class="md-nav__link">
+      <a href="../../blog/20240404/rsync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240405/ufw_pb_port22-mac/" class="md-nav__link">
+      <a href="../../blog/20240405/ufw_pb_port22-mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240410/firewal_rpi/" class="md-nav__link">
+      <a href="../../blog/20240410/firewal_rpi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240410/icmp_journalctl/" class="md-nav__link">
+      <a href="../../blog/20240410/icmp_journalctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240411/samba_partage/" class="md-nav__link">
+      <a href="../../blog/20240411/samba_partage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240413/rpi-rules-loaded/" class="md-nav__link">
+      <a href="../../blog/20240413/rpi-rules-loaded/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240413/rpi-ufw-rulles/" class="md-nav__link">
+      <a href="../../blog/20240413/rpi-ufw-rulles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240606/wsl/" class="md-nav__link">
+      <a href="../../blog/20240606/wsl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240606/wsl_installLinuxDistrib/" class="md-nav__link">
+      <a href="../../blog/20240606/wsl_installLinuxDistrib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240606/wsl_installLinuxDistrib_gpt/" class="md-nav__link">
+      <a href="../../blog/20240606/wsl_installLinuxDistrib_gpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1574,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240606/wsl_installLinuxDistrib_it-connect/" class="md-nav__link">
+      <a href="../../blog/20240606/wsl_installLinuxDistrib_it-connect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/Valgrind/" class="md-nav__link">
+      <a href="../../blog/20240618/Valgrind/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1662,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/aligement/" class="md-nav__link">
+      <a href="../../blog/20240618/aligement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/memory/" class="md-nav__link">
+      <a href="../../blog/20240618/memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1742,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/hardware/microcontroller/" class="md-nav__link">
+      <a href="../../blog/20240618/hardware/microcontroller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1763,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/hardware/pc/" class="md-nav__link">
+      <a href="../../blog/20240618/hardware/pc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1784,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/hardware/tableaux/" class="md-nav__link">
+      <a href="../../blog/20240618/hardware/tableaux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/proc/execution-programmes/" class="md-nav__link">
+      <a href="../../blog/20240618/proc/execution-programmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/proc/instructions/" class="md-nav__link">
+      <a href="../../blog/20240618/proc/instructions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/proc/memoire/" class="md-nav__link">
+      <a href="../../blog/20240618/proc/memoire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/proc/registre-cache/" class="md-nav__link">
+      <a href="../../blog/20240618/proc/registre-cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1981,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240618/rev/binaire/" class="md-nav__link">
+      <a href="../../blog/20240618/rev/binaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2056,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240621/find-exec-stat/" class="md-nav__link">
+      <a href="../../blog/20240621/find-exec-stat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2077,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240621/learn-python/" class="md-nav__link">
+      <a href="../../blog/20240621/learn-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2098,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240621/python-koans/" class="md-nav__link">
+      <a href="../../blog/20240621/python-koans/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2119,11 +2117,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/20240621/today/" class="md-nav__link">
+      <a href="../../blog/20240621/today/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Today
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    20240627
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            20240627
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/20240627/gpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt
   </span>
   
 
@@ -2193,7 +2258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/" class="md-nav__link">
+      <a href="../../commandes-de-base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2214,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/dnsutils/" class="md-nav__link">
+      <a href="../../commandes-de-base/dnsutils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2235,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/dpkg-reconfiure/" class="md-nav__link">
+      <a href="../../commandes-de-base/dpkg-reconfiure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2294,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/droits_permissions/chown/" class="md-nav__link">
+      <a href="../../commandes-de-base/droits_permissions/chown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2315,7 +2380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/droits_permissions/groups/" class="md-nav__link">
+      <a href="../../commandes-de-base/droits_permissions/groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2336,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/droits_permissions/mask/" class="md-nav__link">
+      <a href="../../commandes-de-base/droits_permissions/mask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2403,7 +2468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/cut/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/cut/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2424,7 +2489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/df/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/df/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2445,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/dmesh/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/dmesh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2466,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/du/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/du/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2487,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/rm/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/rm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2508,7 +2573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/sort/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2529,7 +2594,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/tr/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/tar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commandes-de-base/gestion_fichiers/tr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2550,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_fichiers/tree/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_fichiers/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2617,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_processus/journalctl/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_processus/journalctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2638,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_processus/ps_aux/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_processus/ps_aux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2705,7 +2791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/adduser/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/adduser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2726,7 +2812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/deluser/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/deluser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/gpasswd/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/gpasswd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2768,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/groupadd/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/groupadd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2789,7 +2875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/groupdel/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/groupdel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2810,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/id/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/id/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2831,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/su/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/su/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2852,7 +2938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/useradd/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/useradd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2873,7 +2959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/usermod/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/usermod/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2894,7 +2980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/gestion_utilisateurs_groupes/utilisateurs/" class="md-nav__link">
+      <a href="../../commandes-de-base/gestion_utilisateurs_groupes/utilisateurs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2961,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/reseau/hostname/" class="md-nav__link">
+      <a href="../../commandes-de-base/reseau/hostname/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2982,7 +3068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/reseau/hostnamectl/" class="md-nav__link">
+      <a href="../../commandes-de-base/reseau/hostnamectl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3003,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/reseau/nmblookup/" class="md-nav__link">
+      <a href="../../commandes-de-base/reseau/nmblookup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3070,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/build-essential/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/build-essential/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3091,7 +3177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/cron/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/cron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3112,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/debian_alt_click/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/debian_alt_click/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3133,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/debian_ctrl_alt_fleche/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/debian_ctrl_alt_fleche/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3154,7 +3240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/fstab/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/fstab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3175,7 +3261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/instal_debian/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/instal_debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3196,7 +3282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/mount/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/mount/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3217,7 +3303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/mount_samba/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/mount_samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3238,7 +3324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/ntfs-3g/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/ntfs-3g/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3259,7 +3345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/path_scripts/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/path_scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3280,7 +3366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/systeme/redirections/" class="md-nav__link">
+      <a href="../../commandes-de-base/systeme/redirections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3347,7 +3433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/find/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/find/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3368,7 +3454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/gestionnaire_de_paquets/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/gestionnaire_de_paquets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3389,7 +3475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/lsof/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/lsof/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3410,7 +3496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/raccourcis/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/raccourcis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3431,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/terminal_raccourci_clavier/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/terminal_raccourci_clavier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3452,7 +3538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/utilitaires_divers/utils/" class="md-nav__link">
+      <a href="../../commandes-de-base/utilitaires_divers/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3519,7 +3605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/visualisation_fichiers/cat/" class="md-nav__link">
+      <a href="../../commandes-de-base/visualisation_fichiers/cat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3540,7 +3626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/visualisation_fichiers/grep/" class="md-nav__link">
+      <a href="../../commandes-de-base/visualisation_fichiers/grep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3561,7 +3647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/visualisation_fichiers/head/" class="md-nav__link">
+      <a href="../../commandes-de-base/visualisation_fichiers/head/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3582,7 +3668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commandes-de-base/visualisation_fichiers/less/" class="md-nav__link">
+      <a href="../../commandes-de-base/visualisation_fichiers/less/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3615,23 +3701,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3642,7 +3733,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -3656,7 +3747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/container_nodejs-npm-tldr/" class="md-nav__link">
+      <a href="../container_nodejs-npm-tldr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3677,7 +3768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/container_powershell/" class="md-nav__link">
+      <a href="../container_powershell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3695,10 +3786,193 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker compose
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Docker compose
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-de-docker-compose-sous-debian-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation de Docker Compose sous Debian 12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation de Docker Compose sous Debian 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-de-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement de Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-de-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe de Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples Concrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Concrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-demarrer-un-service-web-et-une-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1 : Démarrer un Service Web et une Base de Données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2-construire-une-image-personnalisee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2 : Construire une Image Personnalisée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-complete-des-options-et-explications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste Complète des Options et Explications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3764,7 +4038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/GIGABYTE%20GC-WBAX1200/" class="md-nav__link">
+      <a href="../../hardware/GIGABYTE%20GC-WBAX1200/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3785,7 +4059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/nvidia/" class="md-nav__link">
+      <a href="../../hardware/nvidia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3810,28 +4084,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3842,7 +4111,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Langages
@@ -3853,8 +4122,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3864,11 +4131,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -3882,7 +4149,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Awk
@@ -3893,112 +4160,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Pour compléter les informations sur les 
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Pour compléter les informations sur les 
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#manipulation-de-chaines-de-caracteres-supplementaires" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manipulation de chaînes de caractères supplémentaires
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulation-numerique-supplementaire" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manipulation numérique supplémentaire
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations-sur-les-tableaux-supplementaires" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opérations sur les tableaux supplémentaires
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctions-de-traitement-de-lheure-supplementaires" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctions de traitement de l'heure supplémentaires
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctions-de-traitement-de-fichier-et-de-systeme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctions de traitement de fichier et de système
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../awk%20est%20un%20langage%20de%20programmation%20de/" class="md-nav__link">
+      <a href="../../langages/awk/awk%20est%20un%20langage%20de%20programmation%20de/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4019,7 +4184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../awk/" class="md-nav__link">
+      <a href="../../langages/awk/awk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4040,7 +4205,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../fonctions/" class="md-nav__link">
+      <a href="../../langages/awk/complet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../langages/awk/fonctions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4061,7 +4247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
+      <a href="../../langages/awk/regex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4082,7 +4268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+      <a href="../../langages/awk/variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4149,7 +4335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/ifs/" class="md-nav__link">
+      <a href="../../langages/bash/ifs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4170,7 +4356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/let/" class="md-nav__link">
+      <a href="../../langages/bash/let/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4191,7 +4377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/read/" class="md-nav__link">
+      <a href="../../langages/bash/read/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4212,7 +4398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/typeset/" class="md-nav__link">
+      <a href="../../langages/bash/typeset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4271,7 +4457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/arithmetiques/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/arithmetiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4292,7 +4478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/chaines/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/chaines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4313,7 +4499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/chaines_operateurs/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/chaines_operateurs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4334,7 +4520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/condition_composite/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/condition_composite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4355,7 +4541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/conditions/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/conditions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4376,7 +4562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/fichiers/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/fichiers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4397,7 +4583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/operateurs_logiques/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/operateurs_logiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4418,7 +4604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/structure_boucles/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/structure_boucles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4439,7 +4625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/structure_conditionelle/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/structure_conditionelle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4460,7 +4646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/tableaux/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/tableaux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4481,7 +4667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/variables/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4502,7 +4688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/variables_environnement/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/variables_environnement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4523,11 +4709,141 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bash/bash-docu/variables_special/" class="md-nav__link">
+      <a href="../../langages/bash/bash-docu/variables_special/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Variables special
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_6" id="__nav_6_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../langages/bash/exercices/arithmetiques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arithmetiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../langages/bash/exercices/chaines-operateurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chaines operateurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../langages/bash/exercices/chaines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chaines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../langages/bash/exercices/conditions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions
   </span>
   
 
@@ -4605,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/python-env/" class="md-nav__link">
+      <a href="../../python/python-env/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4709,7 +5025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/editeurs_gestionnaires_fichiers/markdown_in_terminal/" class="md-nav__link">
+      <a href="../../soft/editeurs_gestionnaires_fichiers/markdown_in_terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4730,7 +5046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/editeurs_gestionnaires_fichiers/pandoc/" class="md-nav__link">
+      <a href="../../soft/editeurs_gestionnaires_fichiers/pandoc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4751,7 +5067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/editeurs_gestionnaires_fichiers/vscode_commandLine/" class="md-nav__link">
+      <a href="../../soft/editeurs_gestionnaires_fichiers/vscode_commandLine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4772,7 +5088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/editeurs_gestionnaires_fichiers/xclip/" class="md-nav__link">
+      <a href="../../soft/editeurs_gestionnaires_fichiers/xclip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4839,7 +5155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestion_systeme/dejadup/" class="md-nav__link">
+      <a href="../../soft/gestion_systeme/dejadup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4860,7 +5176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestion_systeme/fail2ban/" class="md-nav__link">
+      <a href="../../soft/gestion_systeme/fail2ban/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4881,7 +5197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestion_systeme/gparted/" class="md-nav__link">
+      <a href="../../soft/gestion_systeme/gparted/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4902,7 +5218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestion_systeme/nmon/" class="md-nav__link">
+      <a href="../../soft/gestion_systeme/nmon/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4969,7 +5285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestionnaires_paquets_outils_divers/network-manager_install/" class="md-nav__link">
+      <a href="../../soft/gestionnaires_paquets_outils_divers/network-manager_install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4990,7 +5306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/gestionnaires_paquets_outils_divers/vite/" class="md-nav__link">
+      <a href="../../soft/gestionnaires_paquets_outils_divers/vite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5057,7 +5373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/machines_virtuelles_conteneurs/virtualbux_dossierPartager/" class="md-nav__link">
+      <a href="../../soft/machines_virtuelles_conteneurs/virtualbux_dossierPartager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5124,7 +5440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/navigateurs_web/lynx/" class="md-nav__link">
+      <a href="../../soft/navigateurs_web/lynx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5191,7 +5507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/terminal_gestionnaires_fenetres/hstr/" class="md-nav__link">
+      <a href="../../soft/terminal_gestionnaires_fenetres/hstr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5212,7 +5528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/terminal_gestionnaires_fenetres/tmux/" class="md-nav__link">
+      <a href="../../soft/terminal_gestionnaires_fenetres/tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5233,7 +5549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/terminal_gestionnaires_fenetres/tty_clock/" class="md-nav__link">
+      <a href="../../soft/terminal_gestionnaires_fenetres/tty_clock/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5254,7 +5570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/terminal_gestionnaires_fenetres/zsh_ohmyzsh/" class="md-nav__link">
+      <a href="../../soft/terminal_gestionnaires_fenetres/zsh_ohmyzsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5321,7 +5637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/utilitaires_reseau/curl/" class="md-nav__link">
+      <a href="../../soft/utilitaires_reseau/curl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5342,7 +5658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/utilitaires_reseau/rsync/" class="md-nav__link">
+      <a href="../../soft/utilitaires_reseau/rsync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5363,7 +5679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/utilitaires_reseau/scp/" class="md-nav__link">
+      <a href="../../soft/utilitaires_reseau/scp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5384,7 +5700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../soft/utilitaires_reseau/wget/" class="md-nav__link">
+      <a href="../../soft/utilitaires_reseau/wget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5458,7 +5774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/resolution-nom-reseau/" class="md-nav__link">
+      <a href="../../sysadmin/resolution-nom-reseau/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5479,7 +5795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/wsdd/" class="md-nav__link">
+      <a href="../../sysadmin/wsdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5538,7 +5854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/iptables/iptables/" class="md-nav__link">
+      <a href="../../sysadmin/iptables/iptables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5559,7 +5875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/iptables/iptables_actions/" class="md-nav__link">
+      <a href="../../sysadmin/iptables/iptables_actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5580,7 +5896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/iptables/iptables_chaines/" class="md-nav__link">
+      <a href="../../sysadmin/iptables/iptables_chaines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5601,7 +5917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/iptables/iptables_commandes/" class="md-nav__link">
+      <a href="../../sysadmin/iptables/iptables_commandes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5622,7 +5938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/iptables/iptables_tuto/" class="md-nav__link">
+      <a href="../../sysadmin/iptables/iptables_tuto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5689,7 +6005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/samba/samba/" class="md-nav__link">
+      <a href="../../sysadmin/samba/samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5710,7 +6026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/samba/samba_ports/" class="md-nav__link">
+      <a href="../../sysadmin/samba/samba_ports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5731,7 +6047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/samba/samba_user/" class="md-nav__link">
+      <a href="../../sysadmin/samba/samba_user/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5752,7 +6068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/samba/smb-client/" class="md-nav__link">
+      <a href="../../sysadmin/samba/smb-client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5811,7 +6127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/samba/smbconf/ex_1/" class="md-nav__link">
+      <a href="../../sysadmin/samba/smbconf/ex_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5886,7 +6202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/serveur_web/lamp/" class="md-nav__link">
+      <a href="../../sysadmin/serveur_web/lamp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5907,7 +6223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/serveur_web/mariadb/" class="md-nav__link">
+      <a href="../../sysadmin/serveur_web/mariadb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5928,7 +6244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/serveur_web/php/" class="md-nav__link">
+      <a href="../../sysadmin/serveur_web/php/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5949,7 +6265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/serveur_web/phpmyadmin/" class="md-nav__link">
+      <a href="../../sysadmin/serveur_web/phpmyadmin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6016,7 +6332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ssh/linux_client_keygen/" class="md-nav__link">
+      <a href="../../sysadmin/ssh/linux_client_keygen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6037,7 +6353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ssh/powershell_client_keygen/" class="md-nav__link">
+      <a href="../../sysadmin/ssh/powershell_client_keygen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6058,7 +6374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ssh/ssh_cl%C3%A9-de-chiffrement/" class="md-nav__link">
+      <a href="../../sysadmin/ssh/ssh_cl%C3%A9-de-chiffrement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6117,7 +6433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ssh/journalctl-rpi-debian/log_and_fix/" class="md-nav__link">
+      <a href="../../sysadmin/ssh/journalctl-rpi-debian/log_and_fix/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6192,7 +6508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ufw/ufw/" class="md-nav__link">
+      <a href="../../sysadmin/ufw/ufw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6213,7 +6529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ufw/ufw_commandes/" class="md-nav__link">
+      <a href="../../sysadmin/ufw/ufw_commandes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6234,7 +6550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ufw/ufw_options/" class="md-nav__link">
+      <a href="../../sysadmin/ufw/ufw_options/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6255,7 +6571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sysadmin/ufw/ufw_tuto/" class="md-nav__link">
+      <a href="../../sysadmin/ufw/ufw_tuto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6329,7 +6645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tuto_adri/install_nodejs/" class="md-nav__link">
+      <a href="../../tuto_adri/install_nodejs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6350,7 +6666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tuto_adri/install_rpi_v1-list/" class="md-nav__link">
+      <a href="../../tuto_adri/install_rpi_v1-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6371,7 +6687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tuto_adri/install_rpi_v1/" class="md-nav__link">
+      <a href="../../tuto_adri/install_rpi_v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6392,7 +6708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tuto_adri/install_vscode/" class="md-nav__link">
+      <a href="../../tuto_adri/install_vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6438,45 +6754,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#manipulation-de-chaines-de-caracteres-supplementaires" class="md-nav__link">
+  <a href="#documentation-de-docker-compose-sous-debian-12" class="md-nav__link">
     <span class="md-ellipsis">
-      Manipulation de chaînes de caractères supplémentaires
+      Documentation de Docker Compose sous Debian 12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation de Docker Compose sous Debian 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-de-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement de Docker Compose
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#manipulation-numerique-supplementaire" class="md-nav__link">
+  <a href="#syntaxe-de-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Manipulation numérique supplémentaire
+      Syntaxe de Docker Compose
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#operations-sur-les-tableaux-supplementaires" class="md-nav__link">
+  <a href="#exemples-concrets" class="md-nav__link">
     <span class="md-ellipsis">
-      Opérations sur les tableaux supplémentaires
+      Exemples Concrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Concrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1-demarrer-un-service-web-et-une-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 1 : Démarrer un Service Web et une Base de Données
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2-construire-une-image-personnalisee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple 2 : Construire une Image Personnalisée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-complete-des-options-et-explications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste Complète des Options et Explications
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fonctions-de-traitement-de-lheure-supplementaires" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctions de traitement de l'heure supplémentaires
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonctions-de-traitement-de-fichier-et-de-systeme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonctions de traitement de fichier et de système
+      Conclusion
     </span>
   </a>
   
@@ -6501,44 +6898,216 @@
     
       
     
-    <a href="https://github.com/aGrellard/documentations_linux/raw/main/docs/langages/awk/Pour compléter les informations sur les .md" title="Consulter la source de cette page" class="md-content__button md-icon">
+    <a href="https://github.com/aGrellard/documentations_linux/raw/main/docs/docker/docker-compose.md" title="Consulter la source de cette page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Pour compléter les informations sur les </h1>
+  <h1>Docker compose</h1>
 
-<p>Pour compléter les informations sur les fonctions intégrées dans <code>awk</code> que vous avez mentionnées, voici quelques fonctions supplémentaires qui peuvent être très utiles, classées par catégorie.</p>
-<h3 id="manipulation-de-chaines-de-caracteres-supplementaires">Manipulation de chaînes de caractères supplémentaires<a class="headerlink" href="#manipulation-de-chaines-de-caracteres-supplementaires" title="Permanent link">&para;</a></h3>
+<h3 id="documentation-de-docker-compose-sous-debian-12">Documentation de Docker Compose sous Debian 12<a class="headerlink" href="#documentation-de-docker-compose-sous-debian-12" title="Permanent link">&para;</a></h3>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>Docker Compose est un outil pour définir et gérer des applications multi-conteneurs Docker. Grâce à un fichier YAML, il permet de configurer les services de votre application et de les déployer en une seule commande. Cette documentation fournit une vue d'ensemble sur l'installation, le fonctionnement, la syntaxe, les options et des exemples d'utilisation de Docker Compose.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<h4 id="pre-requis">Pré-requis<a class="headerlink" href="#pre-requis" title="Permanent link">&para;</a></h4>
+<p>Avant d'installer Docker Compose, assurez-vous que Docker est installé sur votre système. Vous pouvez vérifier cela avec :</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>--version
+</code></pre></div>
+<p>Si Docker n'est pas installé, vous pouvez l'installer en suivant ces étapes :</p>
+<ol>
+<li>Mettre à jour la liste des paquets :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<ol>
+<li>Installer les paquets nécessaires pour utiliser le dépôt Docker :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>lsb-release
+</code></pre></div>
+<ol>
+<li>Ajouter la clé GPG officielle de Docker :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/debian/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre></div>
+<ol>
+<li>Ajouter le dépôt Docker :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div>
+<ol>
+<li>Installer Docker Engine :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io
+</code></pre></div>
+<h4 id="installer-docker-compose">Installer Docker Compose<a class="headerlink" href="#installer-docker-compose" title="Permanent link">&para;</a></h4>
+<p>Pour installer Docker Compose, suivez ces étapes :</p>
+<ol>
+<li>Télécharger la version actuelle de Docker Compose :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-</span><span class="k">$(</span>uname<span class="w"> </span>-s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span>/usr/local/bin/docker-compose
+</code></pre></div>
+<ol>
+<li>Appliquer les permissions d'exécution :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/docker-compose
+</code></pre></div>
+<ol>
+<li>Vérifier l'installation :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>--version
+</code></pre></div>
+<h3 id="fonctionnement-de-docker-compose">Fonctionnement de Docker Compose<a class="headerlink" href="#fonctionnement-de-docker-compose" title="Permanent link">&para;</a></h3>
+<p>Docker Compose utilise un fichier YAML pour configurer les services, les réseaux et les volumes de votre application. Avec ce fichier, vous pouvez démarrer, arrêter et reconstruire vos services avec une seule commande.</p>
+<h3 id="syntaxe-de-docker-compose">Syntaxe de Docker Compose<a class="headerlink" href="#syntaxe-de-docker-compose" title="Permanent link">&para;</a></h3>
+<p>Le fichier de configuration de Docker Compose s'appelle <code>docker-compose.yml</code>. Voici un exemple de syntaxe de base :</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:latest</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+</code></pre></div>
+<h3 id="exemples-concrets">Exemples Concrets<a class="headerlink" href="#exemples-concrets" title="Permanent link">&para;</a></h3>
+<h4 id="exemple-1-demarrer-un-service-web-et-une-base-de-donnees">Exemple 1 : Démarrer un Service Web et une Base de Données<a class="headerlink" href="#exemple-1-demarrer-un-service-web-et-une-base-de-donnees" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Créez un fichier <code>docker-compose.yml</code> avec le contenu suivant :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:latest</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:latest</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+</code></pre></div>
+<ol>
+<li>Démarrez les services avec :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up
+</code></pre></div>
 <ul>
-<li><code>toupper(string)</code> : Convertit tous les caractères de <code>string</code> en majuscules.</li>
-<li><code>tolower(string)</code> : Convertit tous les caractères de <code>string</code> en minuscules.</li>
-<li><code>sprintf(format, arguments...)</code> : Retourne une chaîne formatée selon <code>format</code>, similaire à <code>printf</code> mais retourne la chaîne au lieu de l'imprimer.</li>
+<li>
+<p><code>up</code> : Démarre les conteneurs définis dans le fichier <code>docker-compose.yml</code>.</p>
+</li>
+<li>
+<p>Accédez à votre application web via <code>http://localhost</code>.</p>
+</li>
 </ul>
-<h3 id="manipulation-numerique-supplementaire">Manipulation numérique supplémentaire<a class="headerlink" href="#manipulation-numerique-supplementaire" title="Permanent link">&para;</a></h3>
+<h4 id="exemple-2-construire-une-image-personnalisee">Exemple 2 : Construire une Image Personnalisée<a class="headerlink" href="#exemple-2-construire-une-image-personnalisee" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Créez un fichier <code>Dockerfile</code> pour votre service web :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:latest</span>
+<span class="k">COPY</span><span class="w"> </span>./html<span class="w"> </span>/usr/share/nginx/html
+</code></pre></div>
+<ol>
+<li>Modifiez le fichier <code>docker-compose.yml</code> :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:latest</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+</code></pre></div>
+<ol>
+<li>Démarrez les services avec :</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
 <ul>
-<li><code>rand()</code> : Génère un nombre aléatoire entre 0 et 1.</li>
-<li><code>srand([seed])</code> : Initialise le générateur de nombres aléatoires avec <code>seed</code>. Si <code>seed</code> n'est pas fourni, utilise l'heure actuelle comme graine.</li>
-<li><code>abs(x)</code> : Retourne la valeur absolue de <code>x</code>.</li>
+<li><code>--build</code> : Force la reconstruction des images.</li>
 </ul>
-<h3 id="operations-sur-les-tableaux-supplementaires">Opérations sur les tableaux supplémentaires<a class="headerlink" href="#operations-sur-les-tableaux-supplementaires" title="Permanent link">&para;</a></h3>
-<p>Il n'y a pas beaucoup d'autres fonctions intégrées spécifiques aux tableaux en dehors de celles mentionnées, mais <code>awk</code> offre une grande flexibilité dans la manipulation des tableaux à travers les opérations et les fonctions générales. Cependant, voici quelques fonctionnalités supplémentaires à considérer :</p>
+<h3 id="liste-complete-des-options-et-explications">Liste Complète des Options et Explications<a class="headerlink" href="#liste-complete-des-options-et-explications" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>up</code> : Démarre les conteneurs.</li>
+<li>Exemple : <code>docker-compose up</code></li>
+<li>
+<p>Options :</p>
 <ul>
-<li><strong>Parcourir un tableau</strong> : Utiliser <code>for (index in array)</code> pour parcourir tous les éléments d'un tableau.</li>
-<li><strong>Supprimer un élément</strong> : Utiliser <code>delete array[index]</code> pour supprimer l'élément à l'indice spécifié du tableau.</li>
+<li><code>-d</code> : Démarre les conteneurs en arrière-plan.</li>
+<li>Exemple : <code>docker-compose up -d</code></li>
+<li><code>--build</code> : Reconstruit les images avant de démarrer les conteneurs.</li>
+<li>Exemple : <code>docker-compose up --build</code></li>
 </ul>
-<h3 id="fonctions-de-traitement-de-lheure-supplementaires">Fonctions de traitement de l'heure supplémentaires<a class="headerlink" href="#fonctions-de-traitement-de-lheure-supplementaires" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><code>down</code> : Arrête et supprime les conteneurs, réseaux et volumes créés par <code>up</code>.</p>
+</li>
+<li>Exemple : <code>docker-compose down</code></li>
+<li>
+<p>Options :</p>
 <ul>
-<li><strong>Pas de fonctions supplémentaires directement dans <code>awk</code></strong> : Les fonctions <code>systime()</code> et <code>strftime()</code> sont les principales fonctions intégrées pour manipuler le temps et les dates. Pour des calculs plus complexes ou des formats spécifiques, vous devrez peut-être combiner ces fonctions avec d'autres opérations ou utiliser des commandes externes en combinaison avec <code>awk</code>.</li>
+<li><code>-v</code> : Supprime les volumes associés.</li>
+<li>Exemple : <code>docker-compose down -v</code></li>
 </ul>
-<h3 id="fonctions-de-traitement-de-fichier-et-de-systeme">Fonctions de traitement de fichier et de système<a class="headerlink" href="#fonctions-de-traitement-de-fichier-et-de-systeme" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><code>build</code> : Construit ou reconstruit les services.</p>
+</li>
+<li>Exemple : <code>docker-compose build</code></li>
+<li>
+<p>Options :</p>
 <ul>
-<li><code>close(filename)</code> : Ferme un fichier ou un pipeline précédemment ouvert avec <code>print</code> ou <code>getline</code>.</li>
-<li><code>system(command)</code> : Exécute <code>command</code> dans le shell du système et retourne son statut de sortie. Cela permet d'intégrer des commandes shell directement dans un script <code>awk</code>.</li>
+<li><code>--no-cache</code> : Ne pas utiliser le cache lors de la construction de l'image.</li>
+<li>Exemple : <code>docker-compose build --no-cache</code></li>
 </ul>
-<p>Ces fonctions enrichissent encore plus les possibilités offertes par <code>awk</code> pour le traitement de texte, l'analyse de données, et l'interaction avec le système. Bien que <code>awk</code> soit principalement orienté vers la manipulation de texte, sa capacité à intégrer des commandes système et à effectuer des calculs numériques complexes en fait un outil polyvalent pour de nombreux scénarios de scripting.</p>
+</li>
+<li>
+<p><code>ps</code> : Affiche l'état des conteneurs.</p>
+</li>
+<li>
+<p>Exemple : <code>docker-compose ps</code></p>
+</li>
+<li>
+<p><code>logs</code> : Affiche les logs des conteneurs.</p>
+</li>
+<li>Exemple : <code>docker-compose logs</code></li>
+<li>
+<p>Options :</p>
+<ul>
+<li><code>-f</code> : Affiche les logs en temps réel.</li>
+<li>Exemple : <code>docker-compose logs -f</code></li>
+</ul>
+</li>
+<li>
+<p><code>exec</code> : Exécute une commande dans un conteneur en cours d'exécution.</p>
+</li>
+<li>Exemple : <code>docker-compose exec web sh</code></li>
+<li>
+<p>Options :</p>
+<ul>
+<li><code>-d</code> : Détache après l'exécution de la commande.</li>
+<li>Exemple : <code>docker-compose exec -d web sh</code></li>
+</ul>
+</li>
+<li>
+<p><code>stop</code> : Arrête les conteneurs sans les supprimer.</p>
+</li>
+<li>
+<p>Exemple : <code>docker-compose stop</code></p>
+</li>
+<li>
+<p><code>start</code> : Démarre les conteneurs arrêtés.</p>
+</li>
+<li>Exemple : <code>docker-compose start</code></li>
+</ol>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>Docker Compose est un outil essentiel pour la gestion des applications multi-conteneurs. Avec cette documentation, vous devriez être capable d'installer, configurer et utiliser Docker Compose efficacement sur Debian 12. Pour plus de détails, consultez la <a href="https://docs.docker.com/compose">documentation officielle de Docker Compose</a>.</p>
 
 
 
@@ -6556,6 +7125,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -6603,12 +7174,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "header.autohide", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="../../../javascripts/config.js"></script>
+        <script src="../../javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

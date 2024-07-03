@@ -97,6 +97,19 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 
+## install docker compose
+
+Mettez à jour l'index des paquets et installez la dernière version de Docker Compose.
+
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+```bash
+docker compose version
+```
+
 ## Conclusion
 
 Vous avez maintenant installé et configuré Docker sur Debian 12 "Bookworm". Vous pouvez commencer à utiliser Docker pour conteneuriser et gérer vos applications. Docker simplifie le déploiement d'applications en encapsulant l'application et ses dépendances dans un conteneur isolé, ce qui facilite la portabilité et l'échelle.
