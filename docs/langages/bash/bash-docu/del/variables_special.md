@@ -55,5 +55,3 @@ Pour organiser et compléter la liste des variables spéciales en Bash par caté
 - ### **`$SECONDS`** : Le nombre de secondes depuis que le script a été lancé.
 - ### **`$REPLY`** : La dernière chaîne lue par la commande `read` lorsque aucune variable n'est fournie.
 - ### **`$HISTSIZE`**, **`$HISTFILESIZE`** : Gèrent respectivement le nombre de commandes à conserver dans l'historique et la taille du fichier d'historique.
-
-Cette classification par catégorie aide à identifier rapidement la variable spéciale adaptée à un besoin particulier, que ce soit pour récupérer des informations sur l'environnement d'exécution, gérer les entrées utilisateur et les paramètres du script, contrôler le flux d'exécution, ou accéder à des données utiles pour le débogage et la gestion des processus.

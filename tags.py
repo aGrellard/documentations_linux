@@ -34,9 +34,7 @@ for root, dirs, files in os.walk(docs_dir):
 with open(os.path.join(docs_dir, "tags.md"), "w", encoding="utf-8") as f:
     f.write("# Tags\n\n")
     for tag, pages in tags.items():
-        f.write(f"## {tag}\n\n")
+        f.write(f"## <a id='{tag}'>{tag}</a>\n\n")
         for page in pages:
             f.write(f"- [{page['title']}]({page['url']})\n")
         f.write("\n")
-
-
