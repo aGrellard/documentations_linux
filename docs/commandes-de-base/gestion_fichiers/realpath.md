@@ -1,25 +1,37 @@
+---
+title: realpath
+tags:
+  - ressource
+  - linux
+  - bash
+  - programmation
+  - scripts
+  - programmes
+status:
+  - En cours
+type de note:
+  - ressource
+date: 2024-07-12
+---
+
+
 # Documentation pour la commande `realpath` sous Linux
 
 ## Table des matières
-- [Documentation pour la commande `realpath` sous Linux](#documentation-pour-la-commande-realpath-sous-linux)
-  - [Table des matières](#table-des-matières)
-  - [Introduction](#introduction)
-  - [Installation](#installation)
-    - [Sur Debian/Ubuntu](#sur-debianubuntu)
-    - [Sur Fedora](#sur-fedora)
-    - [Sur Arch Linux](#sur-arch-linux)
-  - [Fonctionnement de la commande `realpath`](#fonctionnement-de-la-commande-realpath)
-  - [Syntaxe de la commande `realpath`](#syntaxe-de-la-commande-realpath)
-    - [Arguments](#arguments)
-  - [Exemples d'utilisation](#exemples-dutilisation)
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Fonctionnement de la commande `realpath`](#fonctionnement-de-la-commande-realpath)
+4. [Syntaxe de la commande `realpath`](#syntaxe-de-la-commande-realpath)
+5. [Exemples d'utilisation](#exemples-dutilisation)
     - [Exemple 1](#exemple-1)
     - [Exemple 2](#exemple-2)
-  - [Options de la commande `realpath`](#options-de-la-commande-realpath)
+6. [Options de la commande `realpath`](#options-de-la-commande-realpath)
     - [Option `--canonicalize`](#option---canonicalize)
     - [Option `--relative-to`](#option---relative-to)
     - [Option `--relative-base`](#option---relative-base)
     - [Option `--help`](#option---help)
     - [Option `--version`](#option---version)
+7. [Connexes](#Connexes)
 
 ## Introduction
 
@@ -177,3 +189,5 @@ realpath --version
 ---
 
 Cette documentation complète et bien structurée vous fournit toutes les informations nécessaires pour utiliser efficacement la commande `realpath` sous Linux. Pour toute question supplémentaire, consultez les pages de manuel en utilisant la commande `man realpath`.
+## Connexes
+- [[Chemin-absolue-cannonique]]

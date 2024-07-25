@@ -1,54 +1,25 @@
-La commande `find` sous Linux est un outil extrêmement puissant et flexible pour rechercher des fichiers dans un système de fichiers. Voici une vue d'ensemble structurée et approfondie de son utilisation :
+---
+title: find
+date: 2024-07-12
+tags:
+  - ressource
+  - bash
+  - linux
+  - programmation
+  - scripts
+  - programmes
+status:
+  - En cours
+type de note:
+  - ressource
+référence:
+  - "[[redirections]]"
+  - "[[Substitution-de-commandes]]"
+---
 
-- [Documentation de Base de `find`](#documentation-de-base-de-find)
-  - [1. **Syntaxe Générale** :](#1-syntaxe-générale-)
-    - [Paramètres](#paramètres)
-    - [Options Principales d'Expression de Recherche](#options-principales-dexpression-de-recherche)
-      - [-name pattern](#-name-pattern)
-      - [-iname pattern](#-iname-pattern)
-      - [-type c](#-type-c)
-      - [-size n\[сwbkMG\]](#-size-nсwbkmg)
-      - [-mtime n](#-mtime-n)
-      - [-user nomUtilisateur](#-user-nomutilisateur)
-      - [-group nomGroupe](#-group-nomgroupe)
-      - [-perm mode](#-perm-mode)
-      - [-exec commande {} ;](#-exec-commande--)
-      - [-ok commande {} ;](#-ok-commande--)
-      - [-prune](#-prune)
-      - [-delete](#-delete)
-    - [Autres Options Utiles](#autres-options-utiles)
-      - [-ctime n](#-ctime-n)
-      - [-atime n](#-atime-n)
-      - [-depth](#-depth)
-      - [-maxdepth levels](#-maxdepth-levels)
-      - [-mindepth levels](#-mindepth-levels)
-    - [Combinaison d'Expressions](#combinaison-dexpressions)
-  - [2. grouper des conditions ou des expressions :](#2-grouper-des-conditions-ou-des-expressions-)
-  - [3. Exlure par -iname ou -name](#3-exlure-par--iname-ou--name)
-    - [version avec ((... -o ...)) -prune -o](#version-avec---o---prune--o)
-    - [version avec  grep](#version-avec--grep)
-    - [version avec  !](#version-avec--)
-- [Exemples d'Utilisation de Base](#exemples-dutilisation-de-base)
-  - [1. **Trouver des Fichiers par Nom** :](#1-trouver-des-fichiers-par-nom-)
-  - [2. **Recherche de Dossiers** :](#2-recherche-de-dossiers-)
-  - [3. **Recherche par Taille de Fichier** :](#3-recherche-par-taille-de-fichier-)
-  - [4. **Recherche par Date de Modification** :](#4-recherche-par-date-de-modification-)
-- [Utilisation avec Pipe pour Afficher la Taille](#utilisation-avec-pipe-pour-afficher-la-taille)
-  - [1. **Taille des Fichiers Trouvés** :](#1-taille-des-fichiers-trouvés-)
-  - [2. **Taille des Dossiers Trouvés** :](#2-taille-des-dossiers-trouvés-)
-- [Autres Exemples Courants](#autres-exemples-courants)
-  - [1. **Trouver et Supprimer** :](#1-trouver-et-supprimer-)
-  - [2. **Trouver et Compresser** :](#2-trouver-et-compresser-)
-    - [Autres Exemples avec Pipe](#autres-exemples-avec-pipe)
-  - [1. **Lister et Trier par Taille** :](#1-lister-et-trier-par-taille-)
-  - [2. **Trouver et Afficher le Contenu** :](#2-trouver-et-afficher-le-contenu-)
-- [Commandes utiles](#commandes-utiles)
-- [Conclusion](#conclusion)
+# Documentation de Base de `find`# [¶](https://agrellard.github.io/documentations_linux/commandes-de-base/utilitaires_divers/find/#documentation-de-base-de-find "Permanent link")
 
-
-# Documentation de Base de `find`
-
-## 1. **Syntaxe Générale** : 
+## 1. Syntaxe Générale : 
    ```bash
    find [chemin...] [option...] [expression de recherche...]
    ```
@@ -150,6 +121,51 @@ La commande `find` sous Linux est un outil extrêmement puissant et flexible pou
 - **expression1 -o expression2** : Opérateur logique "OU".
 - **! expression** : Opérateur logique "NON".
 - **\( expression \)** : Groupe des expressions pour contrôler l'ordre d'évaluation (les backslashes sont nécessaires pour échapper les parenthèses au shell).
+### Utiliser la négation
+L'argument `!` dans la commande `find` sous Linux est utilisé pour négationner une condition. En d'autres termes, il permet de trouver des fichiers ou des répertoires qui ne correspondent pas à un critère spécifique.
+
+Voici quelques exemples concrets pour illustrer comment utiliser cet argument :
+
+#### Exemple 1 : Trouver tous les fichiers sauf ceux avec une extension spécifique
+
+Si vous voulez trouver tous les fichiers dans un répertoire sauf ceux avec l'extension `.txt`, vous pouvez utiliser la commande suivante :
+
+```sh
+find /path/to/directory ! -name "*.txt"
+```
+
+Dans cet exemple, `! -name "*.txt"` signifie que vous cherchez tous les fichiers dont le nom **ne correspond pas** au motif `*.txt`.
+
+#### Exemple 2 : Trouver tous les fichiers sauf ceux d'une taille spécifique
+
+Si vous voulez trouver tous les fichiers qui ne font pas exactement 1 Mo, vous pouvez utiliser la commande suivante :
+
+```sh
+find /path/to/directory ! -size 1M
+```
+
+Ici, `! -size 1M` signifie que vous cherchez tous les fichiers dont la taille **n'est pas** de 1 Mo.
+
+#### Exemple 3 : Trouver tous les fichiers sauf ceux appartenant à un utilisateur spécifique
+
+Si vous voulez trouver tous les fichiers qui n'appartiennent pas à l'utilisateur `john`, vous pouvez utiliser la commande suivante :
+
+```sh
+find /path/to/directory ! -user john
+```
+
+Dans ce cas, `! -user john` signifie que vous cherchez tous les fichiers qui **n'appartiennent pas** à l'utilisateur `john`.
+
+#### Exemple 4 : Combiner plusieurs critères avec la négation
+
+Vous pouvez également combiner plusieurs critères, y compris des négations. Par exemple, si vous voulez trouver tous les fichiers sauf ceux qui sont des fichiers vides et qui n'ont pas l'extension `.log`, vous pouvez utiliser :
+
+```sh
+find /path/to/directory ! -empty ! -name "*.log"
+```
+
+Ici, `! -empty` signifie que vous cherchez tous les fichiers qui **ne sont pas** vides, et `! -name "*.log"` signifie que vous cherchez tous les fichiers dont le nom **ne correspond pas** au motif `*.log`.
+
 
 ## 2. grouper des conditions ou des expressions : 
 
@@ -170,7 +186,7 @@ En résumé, `\( ... \)` sert à :
 - Assurer que les expressions groupées sont traitées comme une seule unité logique par la commande `find`.
 - Éviter l'interprétation des parenthèses par le shell, en les échappant avec `\`.
 
-## 3. Exlure par -iname ou -name
+## 3. Exclure par -iname ou -name
 ### version avec ((... -o ...)) -prune -o
 ```bash
 find /media/adrien/data/programmation_code/_REVISIONS/ -type d \( -iname "*gsdata*" \) -prune -o -iname "*apprentissage*" -print
@@ -264,10 +280,4 @@ find /media/adrien/data/programmation_code/_REVISIONS/ -type d ! -iname "*gsdata
    find /  -type d -iname "*_0_docu*" -iname "*linux" -exec find {} -type f -iname "*md" -mtime -2  \; | sort > result.txt                                                                                                     
    cat result.txt | xargs l -lh | awk -F: '{print $1 $2}'
 
-   find / -type d \( -iname "*gsdata*" -iname "docu" -prune  \) -o \( -iname "*apprentissage*" -print \)                                                                                                                       
-
-   ```
-
-# Conclusion
-
-`find` est un outil très versatile qui peut être combiné avec d'autres commandes UNIX pour effectuer une grande variété de tâches sur des fichiers et des dossiers. La maîtrise de `find` et de ses nombreuses options permet de gagner beaucoup de temps et d'efficacité lors de la gestion des fichiers dans un système Linux.
+   find / -type d \( -iname "*gsdata*" -iname "docu" -prune  \) -o \( -iname "*apprentissage*" -print \)

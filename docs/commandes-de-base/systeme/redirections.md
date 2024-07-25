@@ -1,3 +1,15 @@
+---
+title: redirections
+date: 2024-07-18
+tags:
+  - ressource
+  - linux
+status:
+  - En cours
+type de note:
+  - ressource
+---
+
 - [Introduction aux flux d'entrées et de sorties](#introduction-aux-flux-dentrées-et-de-sorties)
   - [Redirections](#redirections)
     - [Rediriger la sortie standard](#rediriger-la-sortie-standard)
@@ -105,22 +117,23 @@ Cette commande liste les fichiers et dossiers puis trie cette liste.
 
 - #### Concaténer des fichiers en redirigeant l'entrée
 
-    ```bash
-    cat > nouveau_fichier.txt << EOF
-    Texte ligne 1
-    Texte ligne 2
-    EOF
-    ```
+```bash
+cat > nouveau_fichier.txt << EOF
+Texte ligne 1
+Texte ligne 2
+EOF
+```
+    
 
-    Ceci utilise l'opérateur `<<` pour rediriger un bloc de texte (délimité par `EOF` dans ce cas) vers `cat`, qui à son tour le redirige vers `nouveau_fichier.txt`. C'est utile pour écrire plusieurs lignes de texte dans un fichier directement depuis le terminal.
+Ceci utilise l'opérateur `<<` pour rediriger un bloc de texte (délimité par `EOF` dans ce cas) vers `cat`, qui à son tour le redirige vers `nouveau_fichier.txt`. C'est utile pour écrire plusieurs lignes de texte dans un fichier directement depuis le terminal.
 
 - ### Manipulation et analyse des flux d'E/S
 
-    Les outils comme `grep`, `awk`, et `sed` permettent de manipuler et d'analyser les données à l'intérieur de ces flux.
+Les outils comme `grep`, `awk`, et `sed` permettent de manipuler et d'analyser les données à l'intérieur de ces flux.
 
-    - **Filtrer la sortie** : `grep 'motif'` extrait les lignes contenant 'motif'.
-    - **Analyse et transformation** : `awk '{print $1}'` imprime la première colonne de chaque ligne.
-    - **Édition en flux** : `sed 's/ancien/nouveau/g'` remplace toutes les occurrences de 'ancien' par 'nouveau'.
+- **Filtrer la sortie** : `grep 'motif'` extrait les lignes contenant 'motif'.
+- **Analyse et transformation** : `awk '{print $1}'` imprime la première colonne de chaque ligne.
+- **Édition en flux** : `sed 's/ancien/nouveau/g'` remplace toutes les occurrences de 'ancien' par 'nouveau'.
 
 
 ### Exemple : Dupliquer des descripteurs

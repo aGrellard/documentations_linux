@@ -1,4 +1,20 @@
-# Les Opérations Logiques en Bash : Guide Détaillé
+---
+title: Operateurs-Logiques
+date: 2024-07-10
+tags:
+  - ressource
+  - linux
+  - bash
+  - programmation
+  - scripts
+status:
+  - En cours
+type de note:
+  - ressource
+source:
+  - chatgpt
+---
+# Les Opérations Logiques en Bash
 
 Les opérations logiques en Bash permettent d'effectuer des tests et de prendre des décisions en fonction de plusieurs conditions. Ce guide explique les opérateurs logiques de base, leur syntaxe et leur utilisation dans les scripts Bash.
 

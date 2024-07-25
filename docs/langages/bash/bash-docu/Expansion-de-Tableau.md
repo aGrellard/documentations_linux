@@ -3,14 +3,15 @@ title: Expansion de Tableau
 date: 2024-07-10
 tags:
   - ressource
-  - templates
 status:
   - En cours
 type de note:
   - ressource
+source:
+  - chatgpt
 ---
 
-# Documentation pour l'Expansion de Tableau sous Linux
+# Expansion de Tableau
 
 ---
 

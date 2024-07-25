@@ -15,19 +15,7 @@ source:
   - pierre-giraud
 date: 2024-07-10
 ---
-# Documentation pour l'extension arithmétique `$(())` sous Linux
-
-## Table des matières
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Fonctionnement de l'extension arithmétique `$(())`](#fonctionnement-de-lextension-arithmetique)
-4. [Syntaxe de l'extension arithmétique `$(())`](#syntaxe-de-lextension-arithmetique)
-5. [Options de l'extension arithmétique `$(())`](#options-de-lextension-arithmetique)
-6. [Exemples concrets](#exemples-concrets)
-    - [Exemple 1](#exemple-1)
-    - [Exemple-2](#exemple-2)
-    - [Exemple-3](#exemple-3)
-    - [Exemple-4](#exemple-4)
+# L'extension arithmétique `$(())` sous Linux
 
 ## Introduction
 
@@ -146,5 +134,5 @@ echo "Le résultat de 2 ** 3 est : $result"
 Cette documentation vous fournit toutes les informations nécessaires pour comprendre et utiliser efficacement l'extension arithmétique `$(())` sous Linux. Pour toute question supplémentaire, consultez les pages de manuel en utilisant la commande `man bash`.
 
 ## Connexes
-- [[Substitution de commandes]]
+- [[Substitution-de-commandes]]
 - [extension-substitution-commande](https://www.pierre-giraud.com/shell-bash/extension-substitution-commande/)
