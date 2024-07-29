@@ -8,12 +8,14 @@ tags:
   - scripts
   - templates
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 date: 2024-07-10
 source:
   - chatgpt
+référence:
+  - "[[retour dernière commande]]"
 ---
 # bash Variables Spéciales
 

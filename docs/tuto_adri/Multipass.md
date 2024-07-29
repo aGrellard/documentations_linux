@@ -39,6 +39,7 @@ source:
 ## Introduction
 
 Multipass est un outil de Canonical, l'entreprise derrière Ubuntu, qui facilite la création et la gestion de machines virtuelles (VMs) sur Linux, macOS et Windows. Il est particulièrement utile pour les développeurs et les administrateurs système qui ont besoin de VMs légères et rapides pour des tests, du développement ou des déploiements simples.
+
 ## Pourquoi utiliser Multipass ?
 
 1. **Tests sur une VM** : Si vous devez tester des applications ou des configurations système dans un environnement propre et isolé, une VM est souvent préférable à un conteneur Docker, car elle offre une isolation complète.
@@ -50,6 +51,7 @@ Multipass est un outil de Canonical, l'entreprise derrière Ubuntu, qui facilite
 
 - **Les avantages de Multipass** : [[multipass-avantages]]
 - **Comparaison** : [[multipass-vs-virtualbox]]
+- 
 ## Installation sous debian/ubuntu
 
 Deux méthodes pour installer Multipass sur Debian 12 (via Snap et via le paquet `.deb`) elles ont leurs propres avantages et inconvénients. Voici une comparaison pour vous aider à décider laquelle est la meilleure pour votre cas d'utilisation :
@@ -57,11 +59,13 @@ Deux méthodes pour installer Multipass sur Debian 12 (via Snap et via le paquet
 ### Installation via Snap
 
 **Avantages :**
+
 1. **Mises à jour automatiques :** Les applications installées via Snap se mettent à jour automatiquement, vous n'avez donc pas à vous soucier de maintenir Multipass à jour manuellement.
 2. **Isolation :** Snap installe les applications dans un environnement isolé, réduisant ainsi les risques de conflits avec d'autres paquets.
 3. **Facilité d'installation :** Le processus est simplifié et standardisé.
 
 **Inconvénients :**
+
 1. **Dépendances de Snap :** Vous devez installer et configurer Snap sur votre système, ce qui peut ne pas être souhaitable pour certains utilisateurs ou dans certaines configurations.
 2. **Performances :** Les applications Snap peuvent parfois avoir des performances légèrement inférieures en raison de la couche d'abstraction supplémentaire.
 3. **Utilisation d'espace disque :** Snap utilise plus d'espace disque en raison de l'isolation et de la duplication des bibliothèques.
@@ -69,11 +73,13 @@ Deux méthodes pour installer Multipass sur Debian 12 (via Snap et via le paquet
 ### Installation via le paquet `.deb`
 
 **Avantages :**
+
 1. **Contrôle :** Vous avez un contrôle total sur le processus d'installation et les mises à jour.
 2. **Performances :** Les paquets `.deb` sont installés directement dans le système, ce qui peut offrir de meilleures performances.
 3. **Intégration système :** Les paquets `.deb` s'intègrent mieux avec le système Debian, utilisant les bibliothèques partagées et les services existants.
 
 **Inconvénients :**
+
 1. **Mises à jour manuelles :** Vous devez mettre à jour Multipass manuellement en téléchargeant et en installant la nouvelle version.
 2. **Complexité :** Le processus peut être légèrement plus complexe, notamment si des dépendances manquent.
 3. **Conflits potentiels :** Il peut y avoir des conflits avec d'autres paquets installés sur le système.
@@ -89,7 +95,6 @@ La meilleure méthode dépend de vos besoins spécifiques :
 > En résumé, pour un utilisateur qui souhaite une solution facile et maintenable avec peu de gestion, Snap est recommandé. Pour un utilisateur avancé qui cherche à optimiser les performances et l'intégration, l'utilisation du paquet `.deb` serait plus adaptée.
 
 **Installation de Multipass via snap** : [[multipass-installation-snap]]
-**Installation de Multipass via paquet** `.deb` : [[multipass-installation-deb]]
 
 ## Fonctionnement de Multipass
 

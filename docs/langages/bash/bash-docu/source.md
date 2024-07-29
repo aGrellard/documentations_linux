@@ -5,7 +5,7 @@ tags:
   - ressource
   - templates
 status:
-  - En cours
+  - A Terminer
 type de note:
   - ressource
 ---

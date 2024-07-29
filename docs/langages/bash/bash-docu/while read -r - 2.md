@@ -6,11 +6,14 @@ tags:
   - templates
 status:
   - En cours
+  - Complété
 type de note:
   - ressource
 référence:
   - "[[02_RESSOURCES/Linux/bash/commandes/read|read]]"
   - "[[while read -r - 1]]"
+  - "[[structure_boucles]]"
+  - "[[02_RESSOURCES/Linux/programme/find]]"
 ---
 # Documentation pour `find . -type f | while read -r file; do` sous Linux
 

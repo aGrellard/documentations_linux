@@ -7,7 +7,7 @@ tags:
   - linux
   - programmation
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 date: 2024-07-10

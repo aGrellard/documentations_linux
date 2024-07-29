@@ -56,17 +56,17 @@ Ensuite, nous utiliserons la commande `git status` sur chaque dépôt.
 			- nous passerons ce résulta à [[dirname]]
 	- Une variable `repertoire` pour stocker le répertoire des dépôts GitHub.
 	- Une variable `array` pour stocker la liste des dépôts GitHub.
-		- Stocker la sortie de la commande [[find]] dans la variable `array` de type  **Tableaux**. `array=($(find))`
+		- Stocker la sortie de la commande [[02_RESSOURCES/Linux/programme/find]] dans la variable `array` de type  **Tableaux**. `array=($(find))`
 			- [[Tableaux]]
 			- [[Expansion-de-Tableau]]
 			- [[Substitution-de-commandes]]
-7. **Nous** allons donc utiliser la **commande**  [[find]] 
+7. **Nous** allons donc utiliser la **commande**  [[02_RESSOURCES/Linux/programme/find]] 
 	- avec les **arguments** suivant :
 		1. `-maxdepath` : spécifie le niveau maximum de profondeur auquel `find` doit descendre dans l'arborescence des répertoires. Par exemple, si vous définissez `-maxdepth 2`, `find` ne recherchera qu'à une profondeur de deux niveaux dans les répertoires.
 		2. `-type` : permet de spécifier le type de fichier à rechercher
 		3. `-name` : permet de rechercher des fichiers ou des répertoires en fonction de leur nom. Vous pouvez utiliser des caractères génériques comme `*` pour correspondre à des motifs.
 		4. `-path` utilisée pour faire correspondre le chemin complet d'un fichier ou d'un répertoire à un motif donné.
-			- [[find### Utiliser la négation]]
+			- [[02_RESSOURCES/Linux/programme/find### Utiliser la négation]]
 	- [[Substitution-de-commandes]] : Permet de capturer la sortie d'une commande pour l'utiliser comme une variable ou une autre commande.
 	- [[redirections]] 
 		- ***Sortie standard (1)*** : La sortie normale de la commande.

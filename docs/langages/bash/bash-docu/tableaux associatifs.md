@@ -9,6 +9,7 @@ tags:
   - programmation
 status:
   - En cours
+  - Complété
 type de note:
   - ressource
 source:

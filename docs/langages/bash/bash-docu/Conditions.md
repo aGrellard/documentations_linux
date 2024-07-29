@@ -7,7 +7,7 @@ tags:
   - scripts
   - ressource
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 source:

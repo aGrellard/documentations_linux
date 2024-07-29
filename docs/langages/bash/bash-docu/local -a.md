@@ -9,6 +9,7 @@ tags:
   - scripts
 status:
   - En cours
+  - Complété
 type de note:
   - ressource
 ---

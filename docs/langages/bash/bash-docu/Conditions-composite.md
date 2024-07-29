@@ -8,7 +8,7 @@ tags:
   - programmation
   - ressource
 status:
-  - En cours
+  - Complété
 type de note:
   - inbox
   - ressource

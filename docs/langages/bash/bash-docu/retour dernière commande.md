@@ -1,3 +1,13 @@
+---
+title: retour dernière commande
+date: 2024-07-27
+tags:
+  - ressource
+status:
+  - Complété
+type de note:
+  - ressource
+---
 # Documentation pour `$?` en Bash sous Linux
 
 ## Table des matières
@@ -8,6 +18,7 @@
 5. [Exemples concrets](#exemples-concrets)
     - [Exemple 1 : Vérification du succès d'une commande](#exemple-1--vérification-du-succès-dune-commande)
     - [Exemple 2 : Conditions basées sur le code de retour](#exemple-2--conditions-basées-sur-le-code-de-retour)
+
     - [Exemple 3 : Boucle avec vérification du code de retour](#exemple-3--boucle-avec-vérification-du-code-de-retour)
 6. [Conclusion](#conclusion)
 

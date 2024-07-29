@@ -9,8 +9,14 @@ tags:
   - templates
 status:
   - En cours
+  - Complété
 type de note:
   - ressource
+référence:
+  - "[[IFS]]"
+  - "[[structure_boucles]]"
+source:
+  - chatgpt
 ---
 # Documentation pour `while IFS= read -r ligne` sous Linux
 

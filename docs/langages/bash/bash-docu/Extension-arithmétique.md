@@ -7,7 +7,7 @@ tags:
   - programmation
   - linux
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 source:

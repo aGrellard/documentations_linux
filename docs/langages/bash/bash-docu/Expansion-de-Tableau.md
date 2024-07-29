@@ -4,7 +4,7 @@ date: 2024-07-10
 tags:
   - ressource
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 source:

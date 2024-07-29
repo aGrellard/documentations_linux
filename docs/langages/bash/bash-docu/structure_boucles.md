@@ -1,3 +1,16 @@
+---
+title: structure_boucles
+date: 2024-07-27
+tags:
+  - ressource
+status:
+  - En cours
+  - Complété
+type de note:
+  - ressource
+source:
+  - chatgpt
+---
 - [Les Boucles en Bash](#les-boucles-en-bash)
   - [La Boucle `for`](#la-boucle-for)
     - [Syntaxe Générale](#syntaxe-générale)
@@ -18,7 +31,8 @@
 
 # Les Boucles en Bash
 
-Les boucles sont des structures de contrôle fondamentales en Bash qui répètent des blocs de commandes tant qu'une condition est vraie ou pour chaque élément d'une liste. Bash propose principalement deux types de boucles : `for` et `while`, ainsi que `until` comme variante de `while`. Ces structures offrent une grande flexibilité pour automatiser les tâches répétitives.
+Les boucles sont des structures de contrôle fondamentales en Bash qui répètent des blocs de commandes tant qu'une condition est vraie ou pour chaque élément d'une liste. Bash propose principalement deux types de boucles : `for` et `while`,
+ ainsi que `until` comme variante de `while`. Ces structures offrent une grande flexibilité pour automatiser les tâches répétitives.
 
 ## La Boucle `for`
 

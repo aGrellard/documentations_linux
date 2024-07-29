@@ -8,7 +8,7 @@ tags:
   - programmation
   - bash
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 référence:
@@ -16,16 +16,6 @@ référence:
   - "[[Conditions-composite]]"
 ---
 # Documentation pour `BASH_REMATCH` sous Linux
-
-## Table des matières
-1. [Introduction](#introduction)
-2. [Fonctionnement de `BASH_REMATCH`](#fonctionnement-de-bash_rematch)
-3. [Syntaxe de l'utilisation de `BASH_REMATCH`](#syntaxe-de-lutilisation-de-bash_rematch)
-4. [Exemples concrets](#exemples-concrets)
-    - [Exemple 1 : Correspondance simple](#exemple-1--correspondance-simple)
-    - [Exemple 2 : Extraction de groupes capturés](#exemple-2--extraction-de-groupes-capturés)
-    - [Exemple 3 : Vérification d'une adresse email](#exemple-3--vérification-dune-adresse-email)
-5. [Conclusion](#conclusion)
 
 ## Introduction
 

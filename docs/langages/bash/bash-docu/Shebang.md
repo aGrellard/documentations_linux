@@ -8,7 +8,7 @@ tags:
   - scripts
   - programmation
 status:
-  - En cours
+  - Complété
 type de note:
   - ressource
 référence:
